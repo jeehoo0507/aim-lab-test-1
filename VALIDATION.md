@@ -2,13 +2,17 @@
 
 검증일: 2026-09-20. 환경: macOS arm64, Python 3.11.15, PyTorch 2.5.1 CPU.
 
-- 자동 테스트 **28개 통과**: upstream student logits/CLS attention/top-k/gradient parity,
+- 자동 테스트 **33개 통과**: upstream student logits/CLS attention/top-k/gradient parity,
   upstream teacher full/masked logits parity, 실제 DeiT-Tiny/Small 구조,
   rescue token budget/중복/실제 교체 수/matched random control,
   KL 방향/GT probability/group WGA/가중 평균/FG 0개 처리,
   데이터 split/probe/paired 공간 변환/mask 크기 검사,
   CE-only teacher 미호출, 불균등 마지막 microbatch의 gradient accumulation,
   interruption/resume의 parameter 동일성, 설정 변경 시 resume 거부.
+- CUDA 장치 선택 회귀 검사 5개 포함: 번호 없는 `cuda`는 현재 장치 번호로 변환하고,
+  명시한 `cuda:1`은 유지하며, CPU/사용 불가능한 CUDA 경로도 검사.
+  서버에서 보고된 ValueError를 실제 PyTorch 인자 검사 함수로 재현한 뒤 수정 확인.
+  GPU 드라이버 호출은 mock으로 대체했으므로 실제 CUDA 실행 검증은 아님.
 - 통합 setup 스크립트 검사 6개 포함: 외부 폴더에서 시작해도 프로젝트 경로 자동 선택,
   공백이 있는 데이터 경로 전달, 검사 이후 학습 순서, 데이터 검사 실패 시 학습 차단,
   기본 실행에서 장기 학습 미시작, dry-run 무변경, 누락된 옵션 값 거부.

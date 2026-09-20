@@ -26,6 +26,8 @@ def setup_device(cfg):
     if device.type == "cuda":
         if not torch.cuda.is_available():
             raise RuntimeError("CUDA is unavailable. Install CUDA PyTorch on the server or use --device cpu for smoke tests.")
+        if device.index is None:
+            device = torch.device("cuda", torch.cuda.current_device())
         torch.cuda.set_device(device)
         # Deterministic kernels where possible; independent seeds still required.
         torch.backends.cudnn.benchmark = False
