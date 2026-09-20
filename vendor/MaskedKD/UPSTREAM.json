@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/effl-lab/MaskedKD",
+  "commit": "96d052da7346441e2425876a9ad37ff8c87fe383",
+  "files": [
+    "models_student.py",
+    "models_teacher.py",
+    "losses.py",
+    "README.md"
+  ],
+  "note": "Unmodified reference source; runtime uses a torch-only adaptation in waterbirds_kd/models.py. Original copyright notices retained."
+}

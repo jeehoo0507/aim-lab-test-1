@@ -1,0 +1,11 @@
+# Python 3.11. Install CUDA torch/torchvision first; see scripts/setup_server.sh.
+torch==2.5.1
+torchvision==0.20.1
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.14.1
+matplotlib==3.9.2
+pyparsing==3.2.0
+Pillow==11.0.0
+tqdm==4.67.1
+pytest==8.3.4
