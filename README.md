@@ -27,9 +27,21 @@ uv가 없다면 설치한 뒤 Python 3.11 `.venv`를 생성합니다. 환경 생
 → 실제 모델 VRAM 측정 → 전체 데이터 파일 검사를 수행합니다.
 각 단계의 통과/실패, GPU 이름과 여유 메모리, 검사 결과, 다음 실행 명령이 출력됩니다.
 콘솔 출력은 `logs/setup_날짜_시간_PID.log`에도 저장됩니다. 실패하면 즉시 멈춥니다.
-Smoke 결과는 `outputs/setup_smoke/날짜_시간_PID/`에 생성되어 이전 결과 때문에 검사를 건너뛰지 않습니다.
+설치·테스트·CUDA smoke·VRAM 측정·데이터 준비·전체 이미지 검사의 성공 기록을
+`outputs/setup_cache/`에 저장합니다. 같은 코드/설정/환경의 완료 단계는 재사용하고
+실패한 단계부터 다시 수행합니다. 코드·설정·GPU/드라이버·설치 패키지가 바뀌면 관련 검사를 다시 합니다.
+데이터 파일 추가/삭제/크기/수정 시간 변경은 데이터 검사를 다시 하게 합니다.
+GPU 가용성·의존성 일관성·저장 공간은 매번 확인합니다.
+기존 버전 보고서는 fingerprint가 없어 첫 업데이트 실행에 한해 검사 기록을 새로 만듭니다.
+이때도 `.venv`와 이미 설치된 패키지/다운로드 파일은 재사용합니다.
+Smoke가 실제 실행될 때는 `outputs/setup_smoke/날짜_시간_PID/`에 새 결과를 만듭니다.
 검증 공유용 보고서는 `reports/setup/날짜_시간_PID/`에 별도로 저장합니다.
 성공 시 PASSED, 실패 시 FAILED와 종료 코드/실패 단계가 남습니다.
+재사용한 단계는 REUSED로 표시하고 원래 성공 로그와 commit을 이번 보고서에도 보관합니다.
+`storage.json`에는 데이터·segmentation·체크포인트/결과·로그·보고서·가상환경·캐시의
+절대 경로, 심볼릭 링크 해석 결과, 실제 마운트/파일 시스템, 여유 공간 및 `lsblk` 결과가 남습니다.
+존재하지 않는 경로는 가장 가까운 기존 상위 폴더의 저장 장치를 확인합니다.
+`effective_config.json`에는 CLI 경로 override를 적용한 설정을 보관합니다.
 프로세스가 강제 종료되어 완료 기록이 없으면 RUNNING 상태를 성공으로 해석하면 안 됩니다.
 
 ```bash
@@ -47,6 +59,15 @@ bash setup.sh --segmentation-archive /path/to/segmentations.tgz --train
 
 # 변경 없이 어떤 명령을 실행할지 확인
 bash setup.sh --dry-run --train
+
+# 이번 검사 보고서까지 자동 commit/push (실패 보고서도 올림)
+bash setup.sh --push-report
+
+# 완료한 검사도 새로 실행하고 싶을 때
+bash setup.sh --force-checks
+
+# 체크포인트와 분석 결과를 별도 디스크로 지정할 때
+bash setup.sh --output-root /path/to/mounted-disk/maskedkd/outputs/pilot
 ```
 
 `--download-data`를 주지 않으면 데이터를 자동 다운로드하지 않습니다.
@@ -90,6 +111,13 @@ Python/PyTorch/CUDA 출력, 테스트 결과, CUDA smoke test, 실제 모델의 
 데이터 정합성 검사, 실행한 코드의 commit과 초기 Git 변경 상태가 포함됩니다.
 각 단계의 실행 명령과 stdout/stderr를 따로 보관하므로 성공/실패를 실제 로그로 검증할 수 있습니다.
 `config.json`은 입력 설정이며 CLI override는 로그에 기록됩니다.
+
+위 수동 add/commit/push 대신 `bash setup.sh --push-report` 한 번으로 처리할 수도 있습니다.
+서버의 Git 인증 및 현재 branch upstream이 설정되어 있어야 합니다. 이번 보고서 폴더만
+commit하며, 다른 staged 파일은 포함하지 않습니다. Push 실패 시 로컬 보고서/commit은 보존됩니다.
+`--force-checks`는 검사 캐시만 무시합니다. 실제 실험의 완료 조건 건너뛰기 및
+`last.pt`에서 학습 재개하는 동작은 유지합니다.
+학습 재개는 마지막 저장 epoch부터이며 중단된 epoch의 미저장 배치는 다시 수행됩니다.
 
 `reports/`는 Git에서 추적 가능한 경로입니다. `.venv`, `outputs`, `logs`, `data`는
 계속 제외되므로 `git add -f outputs/` 같은 명령은 필요하지 않습니다.

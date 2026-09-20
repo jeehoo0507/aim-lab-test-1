@@ -16,6 +16,9 @@ usage() {
   --config PATH              실험 설정 파일 (기본: configs/pilot.json)
   --data-root PATH           Waterbirds metadata.csv가 있는 폴더
   --seg-root PATH            CUB segmentation 종별 폴더의 상위 폴더
+  --output-root PATH         체크포인트·분석 결과 저장 폴더
+  --force-checks             완료 기록을 무시하고 설치·검사 단계 재실행
+  --push-report              성공/실패 보고서를 현재 Git branch에 commit/push
   --download-data            공식 데이터 다운로드/압축 해제 (프로젝트 data/)
   --segmentation-archive PATH 기존 segmentation archive 사용 (데이터 준비 포함)
   --waterbirds-archive PATH   기존 Waterbirds archive 사용 (데이터 준비 포함)
@@ -36,6 +39,8 @@ SETUP_ARGS=("$@")
 TRAIN=0
 DOWNLOAD=0
 DRY_RUN=0
+FORCE_ARGS=()
+PUSH_REPORT=0
 COMMON_ARGS=()
 DOWNLOAD_ARGS=()
 while (($#)); do
@@ -43,15 +48,17 @@ while (($#)); do
     --train) TRAIN=1; shift ;;
     --download-data) DOWNLOAD=1; shift ;;
     --dry-run) DRY_RUN=1; shift ;;
+    --force-checks) FORCE_ARGS=(--force); shift ;;
+    --push-report) PUSH_REPORT=1; shift ;;
     -h|--help) usage; exit 0 ;;
-    --config|--data-root|--seg-root|--segmentation-archive|--waterbirds-archive)
+    --config|--data-root|--seg-root|--output-root|--segmentation-archive|--waterbirds-archive)
       if [[ $# -lt 2 || -z "$2" || "$2" == --* ]]; then
         printf '오류: %s 뒤에 경로가 필요합니다.\n' "$1" >&2
         exit 2
       fi
       case "$1" in
         --config) CONFIG="$2" ;;
-        --data-root|--seg-root) COMMON_ARGS+=("$1" "$2") ;;
+        --data-root|--seg-root|--output-root) COMMON_ARGS+=("$1" "$2") ;;
         *) DOWNLOAD=1; DOWNLOAD_ARGS+=("$1" "$2") ;;
       esac
       shift 2 ;;
@@ -97,10 +104,21 @@ write_report() {
     printf '\nEach log contains the executed command and its combined stdout/stderr.\n'
     printf 'config.json is the input config; command-line overrides are recorded in the logs.\n'
     printf 'git_status.txt records local changes when this is a Git checkout.\n'
+    printf '\n[Storage paths and mounted devices](storage.json) / [Effective configuration](effective_config.json)\n'
+    printf 'REUSED means prior successful evidence was copied into the current step log; it is not a fresh execution.\n'
     printf '\nThis report verifies setup and diagnostics. Synthetic smoke accuracy is not Waterbirds research evidence.\n'
     printf 'Dataset files, model checkpoints and environment variables are not bundled in this report.\n'
   } > "$REPORT_DIR/README.md.tmp"
   mv "$REPORT_DIR/README.md.tmp" "$REPORT_DIR/README.md"
+}
+
+push_report() {
+  [[ "$PUSH_REPORT" == 1 && "$DRY_RUN" == 0 ]] || return 0
+  local report_path="reports/setup/$RUN_ID"
+  printf '\n검증 보고서를 GitHub에 올립니다: %s\n' "$report_path"
+  git add -- "$report_path" &&
+    git commit --only -m "chore: add server setup report $RUN_ID" -- "$report_path" &&
+    git push && git rev-parse HEAD
 }
 
 failed() {
@@ -116,6 +134,7 @@ failed() {
   if ((STEP_INDEX > 0)); then STEP_STATUS[$((STEP_INDEX-1))]="FAILED"; fi
   write_report FAILED "$status"
   printf 'GitHub 검증 보고서: %s\n' "$REPORT_DIR/README.md"
+  push_report || printf '보고서 push 실패: 파일은 보존되었습니다. Git 인증/remote를 확인한 뒤 직접 push하세요.\n'
   exit "$status"
 }
 trap failed ERR
@@ -141,6 +160,18 @@ run() {
   fi
 }
 
+run_cached() {
+  local stage="$1"
+  shift
+  run "$PYTHON" scripts/setup_support.py cached --stage "$stage" \
+    --config "$REPORT_DIR/effective_config.json" --log "$STEP_LOG" \
+    --status-file "$REPORT_DIR/reused-$STEP_INDEX" "${FORCE_ARGS[@]}" -- "$@"
+  if [[ -f "$REPORT_DIR/reused-$STEP_INDEX" ]]; then
+    STEP_STATUS[$((STEP_INDEX-1))]="REUSED"
+    rm "$REPORT_DIR/reused-$STEP_INDEX"
+  fi
+}
+
 start_step() {
   CURRENT_STEP="$1"
   STEP_INDEX=$((STEP_INDEX+1))
@@ -153,9 +184,11 @@ start_step() {
 
 finish_step() {
   FINISHED+=("$CURRENT_STEP")
-  STEP_STATUS[$((STEP_INDEX-1))]="PASSED"
+  if [[ "${STEP_STATUS[$((STEP_INDEX-1))]}" != "REUSED" ]]; then
+    STEP_STATUS[$((STEP_INDEX-1))]="PASSED"
+  fi
   write_report RUNNING pending
-  printf '[%s] %s\n' "$([[ "$DRY_RUN" == 1 ]] && printf '예정' || printf '통과')" "$CURRENT_STEP"
+  printf '[%s] %s\n' "${STEP_STATUS[$((STEP_INDEX-1))]}" "$CURRENT_STEP"
 }
 
 export CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-0}"
@@ -175,6 +208,7 @@ start_step "서버 사양 확인"
 run nvidia-smi --query-gpu=name,memory.total,memory.free,driver_version --format=csv
 if command -v free >/dev/null 2>&1; then run free -h; fi
 run df -h "$PROJECT_DIR"
+if command -v lsblk >/dev/null 2>&1; then run lsblk -o NAME,SIZE,ROTA,TYPE,FSTYPE,MOUNTPOINT,MODEL; fi
 finish_step
 
 start_step "uv 및 Python 3.11 환경 구성"
@@ -204,34 +238,41 @@ fi
 run "$PYTHON" -c 'import sys; print("Python:", sys.version); assert sys.version_info[:2] == (3, 11), "Python 3.11 가상환경이 필요합니다. 기존 .venv를 별도 보관한 뒤 다시 실행하세요."'
 finish_step
 
+start_step "저장 경로 및 마운트 확인"
+run "$PYTHON" scripts/setup_support.py storage --config "$CONFIG" "${COMMON_ARGS[@]}" \
+  --report-dir "$REPORT_DIR" --smoke-output "$SMOKE_OUTPUT"
+finish_step
+
 start_step "CUDA 패키지 설치"
-run "$UV_BIN" pip install --python "$PYTHON" 'torch==2.5.1+cu121' 'torchvision==0.20.1+cu121' --index-url https://download.pytorch.org/whl/cu121
-run "$UV_BIN" pip install --python "$PYTHON" -r "$PROJECT_DIR/requirements.txt"
+run_cached install-cuda "$UV_BIN" pip install --python "$PYTHON" 'torch==2.5.1+cu121' 'torchvision==0.20.1+cu121' --index-url https://download.pytorch.org/whl/cu121
+run_cached install-requirements "$UV_BIN" pip install --python "$PYTHON" -r "$PROJECT_DIR/requirements.txt"
 run "$UV_BIN" pip check --python "$PYTHON"
 run "$PYTHON" -c 'import torch; print("PyTorch:", torch.__version__, "CUDA runtime:", torch.version.cuda); assert torch.cuda.is_available(), "CUDA 사용 불가: NVIDIA 드라이버와 PyTorch 설치를 확인하세요."; print("GPU:", torch.cuda.get_device_name(0)); print("VRAM GiB:", round(torch.cuda.get_device_properties(0).total_memory / 1024**3, 2))'
+# CUDA availability and dependency consistency are checked freshly even when installs were reused.
+STEP_STATUS[$((STEP_INDEX-1))]="RUNNING"
 finish_step
 
 start_step "자동 테스트"
-run "$PYTHON" -m pytest -q
+run_cached tests "$PYTHON" -m pytest -q
 finish_step
 
 start_step "CUDA 전체 흐름 smoke test"
-# Unique output prevents a previous successful run from skipping GPU execution.
-run "$PYTHON" run.py smoke --device cuda --output-root "$SMOKE_OUTPUT"
+# A failed/forced check uses fresh outputs; only a complete success is reusable.
+run_cached smoke "$PYTHON" run.py smoke --device cuda --output-root "$SMOKE_OUTPUT"
 finish_step
 
 start_step "실제 DeiT VRAM 측정 (조건별 3 step)"
-run "$PYTHON" run.py benchmark --config "$CONFIG" --device cuda "${COMMON_ARGS[@]}" --steps 3
+run_cached benchmark "$PYTHON" run.py benchmark --config "$CONFIG" --device cuda "${COMMON_ARGS[@]}" --steps 3
 finish_step
 
 if [[ "$DOWNLOAD" == 1 ]]; then
   start_step "데이터 준비"
-  run "$PYTHON" scripts/prepare_data.py --data-dir "$PROJECT_DIR/data" "${DOWNLOAD_ARGS[@]}"
+  run_cached prepare-data "$PYTHON" scripts/prepare_data.py --data-dir "$PROJECT_DIR/data" "${DOWNLOAD_ARGS[@]}"
   finish_step
 fi
 
 start_step "실제 데이터 검사"
-run "$PYTHON" run.py preflight --config "$CONFIG" --device cuda "${COMMON_ARGS[@]}" --full-image-check
+run_cached preflight "$PYTHON" run.py preflight --config "$CONFIG" --device cuda "${COMMON_ARGS[@]}" --full-image-check
 finish_step
 
 if [[ "$TRAIN" == 1 ]]; then
@@ -243,7 +284,7 @@ fi
 printf '\n=== %s ===\n' "$([[ "$DRY_RUN" == 1 ]] && printf '실행 예정 순서' || printf '완료 결과')"
 printf '  - %s\n' "${FINISHED[@]}"
 if [[ "$DRY_RUN" == 0 ]]; then
-  printf '\n로그: %s\nSmoke 결과: %s\n' "$LOG_FILE" "$SMOKE_OUTPUT"
+  printf '\n로그: %s\nSmoke 결과 경로는 해당 단계 로그를 확인하세요 (재사용 시 이전 경로).\n' "$LOG_FILE"
 fi
 if [[ "$TRAIN" == 0 ]]; then
   printf '\n전체 학습 시작 명령:\n  '
@@ -256,4 +297,9 @@ write_report PASSED 0
 if [[ "$DRY_RUN" == 0 ]]; then
   printf '\nGitHub에 올릴 검증 보고서: %s\n' "$REPORT_DIR/README.md"
   printf 'reports/setup/ 폴더를 git add / commit / push한 뒤 저장소 URL과 commit SHA를 알려주세요.\n'
+fi
+trap - ERR
+if ! push_report; then
+  printf '보고서 push 실패: 검사는 통과했고 보고서는 보존되었습니다. Git 인증/remote를 확인하세요.\n'
+  exit 1
 fi
