@@ -250,6 +250,35 @@ Probe 그래프의 final은 마지막 학습 epoch이며, 성능 표의 validati
 
 ## 출력과 재시작
 
+실험이 끝난 뒤 분석 자료를 GitHub에 올리는 명령:
+
+```bash
+.venv/bin/python scripts/export_results.py --push
+# output_root를 따로 지정했다면 동일한 경로 전달
+.venv/bin/python scripts/export_results.py --output-root /path/to/results --push
+# 새로운 attention 통계까지 재계산할 수 있게 원본 epoch NPZ도 포함하려면
+.venv/bin/python scripts/export_results.py --include-probes --push
+```
+
+`reports/experiments/실행시각/`에 모든 seed/조건의 config, epoch별 history, result,
+분석 CSV/PNG, summary, 파일별 SHA-256, 완료/누락 상태 및 실측 용량을 모읍니다.
+기본 내보내기만으로 성능·수렴·rescue 비교를 검토할 수 있습니다.
+원본 attention 배열이 필요한 새로운 계산은 `--include-probes`가 필요합니다.
+데이터셋과 `.pt` 체크포인트는 서버에 유지합니다. 분석 파일이 없다면 먼저
+`run.py analyze`를 실행하세요. 내보내기 자체는 분석을 다시 계산하지 않습니다.
+`bash setup.sh --train --push-report`로 시작하면 학습/분석 완료 후 같은 setup 보고서의
+`results/`에 자료를 모아 함께 push합니다. 학습이 중단된 경우 위 export 명령으로
+저장된 부분 결과를 별도로 공유할 수 있습니다.
+
+현재 기본 1 seed(teacher 1 + student 8조건)의 저장 공간 예산은 다음과 같습니다.
+체크포인트(best+last)는 약 0.98GiB, probe/CSV/그림은 대략 0.3–1GiB로 잡습니다.
+데이터/압축 파일 약 1–3GiB, Linux CUDA 가상환경·uv 다운로드 캐시·pretrained 가중치 등
+약 8–16GiB를 포함해 **전체 10–22GiB 예상, 여유 공간 30GiB 이상 확보**를 기준으로 합니다.
+환경/캐시 재사용, filesystem hard link, 보고서 반복 보관 여부에 따라 달라지는 계획치입니다.
+추가 seed는 데이터와 가상환경을 공유하며 실험 출력 약 1.3–2GiB씩 추가됩니다.
+`disk_usage.json`은 실제 경로를 스캔하여 hard link/중복 경로를 한 번만 합산합니다.
+공유 uv/torch 캐시에 다른 프로젝트 파일이 있으면 그것도 포함된 보수적인 실측치입니다.
+
 ```text
 outputs/pilot/
   preflight.json

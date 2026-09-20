@@ -279,6 +279,9 @@ if [[ "$TRAIN" == 1 ]]; then
   start_step "전체 실험 학습 및 분석"
   run "$PYTHON" -u run.py pipeline --config "$CONFIG" --device cuda "${COMMON_ARGS[@]}" --stage all
   finish_step
+  start_step "실험 분석 자료 내보내기"
+  run "$PYTHON" scripts/export_results.py --config "$CONFIG" "${COMMON_ARGS[@]}" --report-dir "$REPORT_DIR/results"
+  finish_step
 fi
 
 printf '\n=== %s ===\n' "$([[ "$DRY_RUN" == 1 ]] && printf '실행 예정 순서' || printf '완료 결과')"

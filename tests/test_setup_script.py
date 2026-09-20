@@ -81,6 +81,9 @@ def test_setup_runs_checks_before_training_and_preserves_paths(setup_project):
     modes = [next(arg for arg in args if arg in ("smoke", "benchmark", "preflight", "pipeline"))
              for args in calls if any(arg in args for arg in ("smoke", "benchmark", "preflight", "pipeline"))]
     assert modes == ["smoke", "benchmark", "preflight", "pipeline"]
+    exported = [args for args in calls if "scripts/export_results.py" in args]
+    assert len(exported) == 1
+    assert calls.index(exported[0]) > next(i for i, args in enumerate(calls) if "pipeline" in args)
     for args in calls:
         if "preflight" in args or "pipeline" in args:
             assert args[args.index("--data-root") + 1] == "/dataset with spaces/birds"

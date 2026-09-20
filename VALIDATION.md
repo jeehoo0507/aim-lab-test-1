@@ -2,7 +2,7 @@
 
 검증일: 2026-09-20. 환경: macOS arm64, Python 3.11.15, PyTorch 2.5.1 CPU.
 
-- 자동 테스트 **45개 통과**: upstream student logits/CLS attention/top-k/gradient parity,
+- 자동 테스트 **47개 통과**: upstream student logits/CLS attention/top-k/gradient parity,
   upstream teacher full/masked logits parity, 실제 DeiT-Tiny/Small 구조,
   rescue token budget/중복/실제 교체 수/matched random control,
   KL 방향/GT probability/group WGA/가중 평균/FG 0개 처리,
@@ -26,6 +26,10 @@
   Linux findmnt/lsblk 저장 장치 결과는 서버 보고서로 추가 확인해야 함.
 - 로컬 bare Git remote로 성공/실패 보고서 자동 commit/push 검증.
   다른 staged 파일을 포함하지 않고, 원격에 최종 PASSED/FAILED 상태가 보존됨을 확인.
+- 실험 결과 내보내기의 CSV/그림/history 포함, checkpoint 제외, 원본 NPZ 선택 포함,
+  누락 조건 표시 및 hard link/중복 경로를 제외한 용량 합산 검사 통과.
+  기존 합성 8조건 결과를 실제 CLI로 내보내어 분석 자료 6.61MiB 생성 확인
+  (실제 Waterbirds/100 epochs 결과 크기로 해석하면 안 됨).
 - CUDA 12.1용 torch/torchvision의 uv 의존성 해결을 Linux 대상으로 dry-run 검증.
 - 합성 데이터에서 teacher + student **8조건 전체** 학습 완료.
 - 이전용 source archive를 별도 폴더에 풀어 동일한 전체 smoke test 재실행 성공
