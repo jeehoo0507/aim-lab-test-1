@@ -1,0 +1,4 @@
+$ /home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv/bin/python scripts/setup_support.py cached --stage tests --config /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_214256_4099535/effective_config.json --log /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_214256_4099535/05.log --status-file /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_214256_4099535/reused-5 -- /home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv/bin/python -m pytest -q 
+[실행] tests
+...............................................                          [100%]
+47 passed in 57.78s

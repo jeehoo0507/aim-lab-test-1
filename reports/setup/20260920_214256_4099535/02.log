@@ -1,0 +1,4 @@
+$ /home/kebap/miniforge3/bin/uv --version 
+uv 0.6.12
+$ /home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv/bin/python -c import\ sys\;\ print\(\"Python:\"\,\ sys.version\)\;\ assert\ sys.version_info\[:2\]\ ==\ \(3\,\ 11\)\,\ \"Python\ 3.11\ 가상환경이\ 필요합니다.\ 기존\ .venv를\ 별도\ 보관한\ 뒤\ 다시\ 실행하세요.\" 
+Python: 3.11.11 (main, Mar 17 2025, 21:02:09) [Clang 20.1.0 ]
