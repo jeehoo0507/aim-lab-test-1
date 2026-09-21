@@ -1,0 +1,53 @@
+{
+  "method": "teacher",
+  "seed": 0,
+  "best_epoch": 11,
+  "validation": {
+    "accuracy": 0.8924103419516264,
+    "group_accuracy": {
+      "landbird_land": 0.987152034261242,
+      "landbird_water": 0.7854077253218884,
+      "waterbird_land": 0.8571428571428571,
+      "waterbird_water": 0.9699248120300752
+    },
+    "group_counts": {
+      "landbird_land": 467,
+      "landbird_water": 466,
+      "waterbird_land": 133,
+      "waterbird_water": 133
+    },
+    "worst_group_accuracy": 0.7854077253218884,
+    "train_weighted_accuracy": 0.9740945492431368
+  },
+  "test": {
+    "accuracy": 0.8879875733517432,
+    "group_accuracy": {
+      "landbird_land": 0.9893569844789357,
+      "landbird_water": 0.7738359201773836,
+      "waterbird_land": 0.8457943925233645,
+      "waterbird_water": 0.9750778816199377
+    },
+    "group_counts": {
+      "landbird_land": 2255,
+      "landbird_water": 2255,
+      "waterbird_land": 642,
+      "waterbird_water": 642
+    },
+    "worst_group_accuracy": 0.7738359201773836,
+    "train_weighted_accuracy": 0.9762624291707065
+  },
+  "metadata_sha256": "2f023b9dc371f6fbb82c7cb810ff0f03e19c54c8055a2e37517ae7bb56644362",
+  "teacher_sha256": null,
+  "train_group_weights": [
+    0.7295099061522419,
+    0.0383733055265902,
+    0.01167883211678832,
+    0.22043795620437956
+  ],
+  "model_scale": "deit",
+  "student_init": "scratch",
+  "keep_tokens": 98,
+  "partial_training": false,
+  "seconds_this_invocation": 672.3706175291445,
+  "checkpoint_selection": "maximum validation WGA; earliest epoch breaks ties"
+}

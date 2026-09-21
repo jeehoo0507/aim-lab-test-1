@@ -1,0 +1,53 @@
+{
+  "method": "foreground_rescue_10",
+  "seed": 0,
+  "best_epoch": 78,
+  "validation": {
+    "accuracy": 0.6030025020850709,
+    "group_accuracy": {
+      "landbird_land": 0.9271948608137045,
+      "landbird_water": 0.30472103004291845,
+      "waterbird_land": 0.24812030075187969,
+      "waterbird_water": 0.8646616541353384
+    },
+    "group_counts": {
+      "landbird_land": 467,
+      "landbird_water": 466,
+      "waterbird_land": 133,
+      "waterbird_water": 133
+    },
+    "worst_group_accuracy": 0.24812030075187969,
+    "train_weighted_accuracy": 0.8815929922664011
+  },
+  "test": {
+    "accuracy": 0.6042457714877459,
+    "group_accuracy": {
+      "landbird_land": 0.9303769401330377,
+      "landbird_water": 0.3144124168514412,
+      "waterbird_land": 0.20404984423676012,
+      "waterbird_water": 0.8769470404984424
+    },
+    "group_counts": {
+      "landbird_land": 2255,
+      "landbird_water": 2255,
+      "waterbird_land": 642,
+      "waterbird_water": 642
+    },
+    "worst_group_accuracy": 0.20404984423676012,
+    "train_weighted_accuracy": 0.8864797151971101
+  },
+  "metadata_sha256": "2f023b9dc371f6fbb82c7cb810ff0f03e19c54c8055a2e37517ae7bb56644362",
+  "teacher_sha256": "902a5e689770dbb76c9542d7b1a8afce1cf7ce1a690a21447c5842f676bbd81a",
+  "train_group_weights": [
+    0.7295099061522419,
+    0.0383733055265902,
+    0.01167883211678832,
+    0.22043795620437956
+  ],
+  "model_scale": "deit",
+  "student_init": "scratch",
+  "keep_tokens": 98,
+  "partial_training": false,
+  "seconds_this_invocation": 2819.1928706390318,
+  "checkpoint_selection": "maximum validation WGA; earliest epoch breaks ties"
+}

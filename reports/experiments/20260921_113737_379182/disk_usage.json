@@ -1,0 +1,36 @@
+{
+  "paths": {
+    "project": {
+      "path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1",
+      "exists": true,
+      "allocated_gib": 10.162437438964844
+    },
+    "dataset": {
+      "path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/data/waterbird_complete95_forest2water2",
+      "exists": true,
+      "allocated_gib": 0.4814186096191406
+    },
+    "segmentations": {
+      "path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/data/CUB_200_2011/segmentations",
+      "exists": true,
+      "allocated_gib": 0.05612945556640625
+    },
+    "experiment_outputs": {
+      "path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/outputs/pilot",
+      "exists": true,
+      "allocated_gib": 3.652179718017578
+    },
+    "uv_cache": {
+      "path": "/home/kebap/.cache/uv",
+      "exists": true,
+      "allocated_gib": 59.14446258544922
+    },
+    "torch_cache": {
+      "path": "/home/kebap/.cache/torch",
+      "exists": true,
+      "allocated_gib": 0.12588882446289062
+    }
+  },
+  "unique_allocated_gib": 64.36991500854492,
+  "note": "Overlapping paths/hard links counted once in total. Shared caches may include other projects; filesystem metadata and nested symlink targets are excluded."
+}

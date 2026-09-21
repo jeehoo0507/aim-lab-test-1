@@ -1,0 +1,44 @@
+{
+  "python": "3.11.11",
+  "torch": "2.5.1+cu121",
+  "device": "cuda:0",
+  "metadata_sha256": "2f023b9dc371f6fbb82c7cb810ff0f03e19c54c8055a2e37517ae7bb56644362",
+  "effective_batch_size": 128,
+  "segmentation_available": true,
+  "splits": {
+    "train": {
+      "count": 4795,
+      "groups": {
+        "landbird_land": 3498,
+        "landbird_water": 184,
+        "waterbird_land": 56,
+        "waterbird_water": 1057
+      }
+    },
+    "validation": {
+      "count": 1199,
+      "groups": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      }
+    },
+    "test": {
+      "count": 5794,
+      "groups": {
+        "landbird_land": 2255,
+        "landbird_water": 2255,
+        "waterbird_land": 642,
+        "waterbird_water": 642
+      }
+    }
+  },
+  "gpu": {
+    "name": "NVIDIA RTX A5000",
+    "total_gib": 23.5419921875,
+    "free_gib": 18.56195068359375
+  },
+  "disk_free_gib": 91.64430236816406,
+  "image_integrity_check": "all paths; two transformed examples per group/split"
+}
