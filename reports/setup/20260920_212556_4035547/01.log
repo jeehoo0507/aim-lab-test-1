@@ -1,0 +1,10 @@
+$ nvidia-smi --query-gpu=name\,memory.total\,memory.free\,driver_version --format=csv 
+name, memory.total [MiB], memory.free [MiB], driver_version
+NVIDIA RTX A5000, 24564 MiB, 19138 MiB, 595.84
+$ free -h 
+               total        used        free      shared  buff/cache   available
+Mem:           125Gi        72Gi        12Gi       1.5Gi        43Gi        52Gi
+Swap:             0B          0B          0B
+$ df -h /home/kebap/Desktop/workspace/34/aim-lab-test-1 
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p3  795G  658G   97G  88% /home

@@ -1,0 +1,3 @@
+$ /home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv/bin/python -m pytest -q 
+............................                                             [100%]
+28 passed in 21.64s

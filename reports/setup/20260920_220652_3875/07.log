@@ -1,0 +1,34 @@
+$ /home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv/bin/python scripts/setup_support.py cached --stage benchmark --config /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_220652_3875/effective_config.json --log /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_220652_3875/07.log --status-file /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_220652_3875/reused-7 -- /home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv/bin/python run.py benchmark --config configs/pilot.json --device cuda --steps 3 
+[재사용] benchmark; 이전 성공 로그: /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_214256_4099535/07.log; 원본 commit: 752294d605128755485d7e3f1d638f393786b6f2; fingerprint: 5e2fa5329a7fe93b953fae3c36ba4899a7f4b5e24c1faed665049460e1acf961
+$ /home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv/bin/python scripts/setup_support.py cached --stage benchmark --config /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_214256_4099535/effective_config.json --log /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_214256_4099535/07.log --status-file /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_214256_4099535/reused-7 -- /home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv/bin/python run.py benchmark --config configs/pilot.json --device cuda --steps 3 
+[실행] benchmark
+[
+  {
+    "case": "teacher_training",
+    "device": "cuda:0",
+    "batch_size": 32,
+    "steps": 3,
+    "seconds_per_step": 0.30110490368679166,
+    "peak_allocated_gib": 1.9126982688903809,
+    "peak_reserved_gib": 2.078125
+  },
+  {
+    "case": "student_full_kd",
+    "device": "cuda:0",
+    "batch_size": 32,
+    "steps": 3,
+    "seconds_per_step": 0.12522873297954598,
+    "peak_allocated_gib": 1.1177682876586914,
+    "peak_reserved_gib": 1.341796875
+  },
+  {
+    "case": "student_masked_kd",
+    "device": "cuda:0",
+    "batch_size": 32,
+    "steps": 3,
+    "seconds_per_step": 0.14909767033532262,
+    "peak_allocated_gib": 1.0425724983215332,
+    "peak_reserved_gib": 1.267578125
+  }
+]
+

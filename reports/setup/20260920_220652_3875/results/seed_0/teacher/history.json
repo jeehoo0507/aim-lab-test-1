@@ -1,0 +1,932 @@
+[
+  {
+    "epoch": 1,
+    "lr": 1e-05,
+    "train": {
+      "loss": 0.41265362983451026,
+      "ce": 0.41265362983451026,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 18.148999009048566
+    },
+    "validation": {
+      "accuracy": 0.6663886572143453,
+      "group_accuracy": {
+        "landbird_land": 0.9914346895074947,
+        "landbird_water": 0.45064377682403434,
+        "waterbird_land": 0.08270676691729323,
+        "waterbird_water": 0.8646616541353384
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.08270676691729323,
+      "train_weighted_accuracy": 0.9321242849220562
+    }
+  },
+  {
+    "epoch": 2,
+    "lr": 2e-05,
+    "train": {
+      "loss": 0.28121224099826514,
+      "ce": 0.28121224099826514,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 18.138551163952798
+    },
+    "validation": {
+      "accuracy": 0.8198498748957465,
+      "group_accuracy": {
+        "landbird_land": 0.9935760171306209,
+        "landbird_water": 0.6974248927038627,
+        "waterbird_land": 0.5037593984962406,
+        "waterbird_water": 0.9548872180451128
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.5037593984962406,
+      "train_weighted_accuracy": 0.9679627536954944
+    }
+  },
+  {
+    "epoch": 3,
+    "lr": 3.0000000000000004e-05,
+    "train": {
+      "loss": 0.24765148397779813,
+      "ce": 0.24765148397779813,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 18.616543564014137
+    },
+    "validation": {
+      "accuracy": 0.8773978315262719,
+      "group_accuracy": {
+        "landbird_land": 0.9892933618843683,
+        "landbird_water": 0.8304721030042919,
+        "waterbird_land": 0.5789473684210527,
+        "waterbird_water": 0.9473684210526315
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.5789473684210527,
+      "train_weighted_accuracy": 0.969164654954853
+    }
+  },
+  {
+    "epoch": 4,
+    "lr": 4e-05,
+    "train": {
+      "loss": 0.23136786101570467,
+      "ce": 0.23136786101570467,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 18.367933253990486
+    },
+    "validation": {
+      "accuracy": 0.8915763135946623,
+      "group_accuracy": {
+        "landbird_land": 0.9935760171306209,
+        "landbird_water": 0.8605150214592274,
+        "waterbird_land": 0.5939849624060151,
+        "waterbird_water": 0.9398496240601504
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.5939849624060151,
+      "train_weighted_accuracy": 0.9719599337638636
+    }
+  },
+  {
+    "epoch": 5,
+    "lr": 5e-05,
+    "train": {
+      "loss": 0.2206936064117022,
+      "ce": 0.2206936064117022,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 17.890021177008748
+    },
+    "validation": {
+      "accuracy": 0.9065888240200167,
+      "group_accuracy": {
+        "landbird_land": 0.9957173447537473,
+        "landbird_water": 0.8905579399141631,
+        "waterbird_land": 0.6165413533834586,
+        "waterbird_water": 0.9398496240601504
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.6165413533834586,
+      "train_weighted_accuracy": 0.9749383318694195
+    }
+  },
+  {
+    "epoch": 6,
+    "lr": 5e-05,
+    "train": {
+      "loss": 0.2132894113799703,
+      "ce": 0.2132894113799703,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 17.7496981988661
+    },
+    "validation": {
+      "accuracy": 0.896580483736447,
+      "group_accuracy": {
+        "landbird_land": 0.9957173447537473,
+        "landbird_water": 0.8626609442060086,
+        "waterbird_land": 0.6090225563909775,
+        "waterbird_water": 0.9548872180451128
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.6090225563909775,
+      "train_weighted_accuracy": 0.9770948776463175
+    }
+  },
+  {
+    "epoch": 7,
+    "lr": 4.979039910365836e-05,
+    "train": {
+      "loss": 0.2078833686422879,
+      "ce": 0.2078833686422879,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 18.421114755095914
+    },
+    "validation": {
+      "accuracy": 0.9074228523769808,
+      "group_accuracy": {
+        "landbird_land": 1.0,
+        "landbird_water": 0.9098712446351931,
+        "waterbird_land": 0.5413533834586466,
+        "waterbird_water": 0.9398496240601504
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.5413533834586466,
+      "train_weighted_accuracy": 0.9779255789610299
+    }
+  },
+  {
+    "epoch": 8,
+    "lr": 4.9165182744082176e-05,
+    "train": {
+      "loss": 0.2054605676247753,
+      "ce": 0.2054605676247753,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 18.381324416026473
+    },
+    "validation": {
+      "accuracy": 0.9007506255212677,
+      "group_accuracy": {
+        "landbird_land": 0.9978586723768736,
+        "landbird_water": 0.8669527896995708,
+        "waterbird_land": 0.6390977443609023,
+        "waterbird_water": 0.9398496240601504
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.6390977443609023,
+      "train_weighted_accuracy": 0.9758580762450081
+    }
+  },
+  {
+    "epoch": 9,
+    "lr": 4.8135048546526525e-05,
+    "train": {
+      "loss": 0.2029641381300776,
+      "ce": 0.2029641381300776,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 17.943566924892366
+    },
+    "validation": {
+      "accuracy": 0.9115929941618015,
+      "group_accuracy": {
+        "landbird_land": 0.9957173447537473,
+        "landbird_water": 0.8669527896995708,
+        "waterbird_land": 0.7293233082706767,
+        "waterbird_water": 0.9548872180451128
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.7293233082706767,
+      "train_weighted_accuracy": 0.9786645422294413
+    }
+  },
+  {
+    "epoch": 10,
+    "lr": 4.671762239271875e-05,
+    "train": {
+      "loss": 0.2018770847877447,
+      "ce": 0.2018770847877447,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 16.816121503943577
+    },
+    "validation": {
+      "accuracy": 0.9132610508757297,
+      "group_accuracy": {
+        "landbird_land": 1.0,
+        "landbird_water": 0.8798283261802575,
+        "waterbird_land": 0.6842105263157895,
+        "waterbird_water": 0.9548872180451128
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.6842105263157895,
+      "train_weighted_accuracy": 0.9817559939446372
+    }
+  },
+  {
+    "epoch": 11,
+    "lr": 4.4937156837135266e-05,
+    "train": {
+      "loss": 0.2028842351608157,
+      "ce": 0.2028842351608157,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 18.172242116881534
+    },
+    "validation": {
+      "accuracy": 0.8924103419516264,
+      "group_accuracy": {
+        "landbird_land": 0.987152034261242,
+        "landbird_water": 0.7854077253218884,
+        "waterbird_land": 0.8571428571428571,
+        "waterbird_water": 0.9699248120300752
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.7854077253218884,
+      "train_weighted_accuracy": 0.9740945492431368
+    }
+  },
+  {
+    "epoch": 12,
+    "lr": 4.2824116139070415e-05,
+    "train": {
+      "loss": 0.20372617006364033,
+      "ce": 0.20372617006364033,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 17.98253576713614
+    },
+    "validation": {
+      "accuracy": 0.8832360300250208,
+      "group_accuracy": {
+        "landbird_land": 0.9935760171306209,
+        "landbird_water": 0.8047210300429185,
+        "waterbird_land": 0.6842105263157895,
+        "waterbird_water": 0.9699248120300752
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.6842105263157895,
+      "train_weighted_accuracy": 0.977502376066795
+    }
+  },
+  {
+    "epoch": 13,
+    "lr": 4.041465501071366e-05,
+    "train": {
+      "loss": 0.20167326705920685,
+      "ce": 0.20167326705920685,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 18.37202005996369
+    },
+    "validation": {
+      "accuracy": 0.8974145120934112,
+      "group_accuracy": {
+        "landbird_land": 0.9935760171306209,
+        "landbird_water": 0.8347639484978541,
+        "waterbird_land": 0.706766917293233,
+        "waterbird_water": 0.9699248120300752
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.706766917293233,
+      "train_weighted_accuracy": 0.978918654458963
+    }
+  },
+  {
+    "epoch": 14,
+    "lr": 3.775e-05,
+    "train": {
+      "loss": 0.20072375892722694,
+      "ce": 0.20072375892722694,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 18.36220505903475
+    },
+    "validation": {
+      "accuracy": 0.9132610508757297,
+      "group_accuracy": {
+        "landbird_land": 0.9957173447537473,
+        "landbird_water": 0.851931330472103,
+        "waterbird_land": 0.7819548872180451,
+        "waterbird_water": 0.9699248120300752
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.7819548872180451,
+      "train_weighted_accuracy": 0.9820176510438947
+    }
+  },
+  {
+    "epoch": 15,
+    "lr": 3.4875744092944704e-05,
+    "train": {
+      "loss": 0.2005816333423193,
+      "ce": 0.2005816333423193,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 17.73130778199993
+    },
+    "validation": {
+      "accuracy": 0.9007506255212677,
+      "group_accuracy": {
+        "landbird_land": 0.9957173447537473,
+        "landbird_water": 0.851931330472103,
+        "waterbird_land": 0.6616541353383458,
+        "waterbird_water": 0.9774436090225563
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.6616541353383458,
+      "train_weighted_accuracy": 0.9822701070013065
+    }
+  },
+  {
+    "epoch": 16,
+    "lr": 3.184106660501176e-05,
+    "train": {
+      "loss": 0.20036960885596847,
+      "ce": 0.20036960885596847,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 17.388808174990118
+    },
+    "validation": {
+      "accuracy": 0.9115929941618015,
+      "group_accuracy": {
+        "landbird_land": 0.9935760171306209,
+        "landbird_water": 0.871244635193133,
+        "waterbird_land": 0.706766917293233,
+        "waterbird_water": 0.9699248120300752
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.706766917293233,
+      "train_weighted_accuracy": 0.9803185389953407
+    }
+  },
+  {
+    "epoch": 17,
+    "lr": 2.8697891709391273e-05,
+    "train": {
+      "loss": 0.19975806021590925,
+      "ce": 0.19975806021590925,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 17.999104011105374
+    },
+    "validation": {
+      "accuracy": 0.9065888240200167,
+      "group_accuracy": {
+        "landbird_land": 0.9957173447537473,
+        "landbird_water": 0.8626609442060086,
+        "waterbird_land": 0.6917293233082706,
+        "waterbird_water": 0.9624060150375939
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.6917293233082706,
+      "train_weighted_accuracy": 0.9797182243342051
+    }
+  },
+  {
+    "epoch": 18,
+    "lr": 2.5500000000000003e-05,
+    "train": {
+      "loss": 0.19958536141358774,
+      "ce": 0.19958536141358774,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 18.14940595580265
+    },
+    "validation": {
+      "accuracy": 0.8865721434528774,
+      "group_accuracy": {
+        "landbird_land": 0.9914346895074947,
+        "landbird_water": 0.7918454935622318,
+        "waterbird_land": 0.7593984962406015,
+        "waterbird_water": 0.9774436090225563
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.7593984962406015,
+      "train_weighted_accuracy": 0.977981715378307
+    }
+  },
+  {
+    "epoch": 19,
+    "lr": 2.2302108290608744e-05,
+    "train": {
+      "loss": 0.20167929530143738,
+      "ce": 0.20167929530143738,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 18.52893531601876
+    },
+    "validation": {
+      "accuracy": 0.9099249374478732,
+      "group_accuracy": {
+        "landbird_land": 0.9957173447537473,
+        "landbird_water": 0.8755364806866953,
+        "waterbird_land": 0.6766917293233082,
+        "waterbird_water": 0.9624060150375939
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.6766917293233082,
+      "train_weighted_accuracy": 0.9800366796938064
+    }
+  },
+  {
+    "epoch": 20,
+    "lr": 1.9158933394988242e-05,
+    "train": {
+      "loss": 0.20013802372874756,
+      "ce": 0.20013802372874756,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 18.11300809518434
+    },
+    "validation": {
+      "accuracy": 0.9032527105921602,
+      "group_accuracy": {
+        "landbird_land": 0.9914346895074947,
+        "landbird_water": 0.8412017167381974,
+        "waterbird_land": 0.7443609022556391,
+        "waterbird_water": 0.9699248120300752
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.7443609022556391,
+      "train_weighted_accuracy": 0.9780426270321481
+    }
+  },
+  {
+    "epoch": 21,
+    "lr": 1.6124255907055302e-05,
+    "train": {
+      "loss": 0.19987842349240378,
+      "ce": 0.19987842349240378,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 18.18602148303762
+    },
+    "validation": {
+      "accuracy": 0.9007506255212677,
+      "group_accuracy": {
+        "landbird_land": 0.9978586723768736,
+        "landbird_water": 0.851931330472103,
+        "waterbird_land": 0.6616541353383458,
+        "waterbird_water": 0.9699248120300752
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.6616541353383458,
+      "train_weighted_accuracy": 0.9821747984725563
+    }
+  },
+  {
+    "epoch": 22,
+    "lr": 1.3250000000000007e-05,
+    "train": {
+      "loss": 0.2001589551148499,
+      "ce": 0.2001589551148499,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 18.080819122027606
+    },
+    "validation": {
+      "accuracy": 0.908256880733945,
+      "group_accuracy": {
+        "landbird_land": 0.9957173447537473,
+        "landbird_water": 0.8562231759656652,
+        "waterbird_land": 0.7218045112781954,
+        "waterbird_water": 0.9699248120300752
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.7218045112781954,
+      "train_weighted_accuracy": 0.9814798571999288
+    }
+  },
+  {
+    "epoch": 23,
+    "lr": 1.0585344989286346e-05,
+    "train": {
+      "loss": 0.1992155684233955,
+      "ce": 0.1992155684233955,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 17.789438345003873
+    },
+    "validation": {
+      "accuracy": 0.9007506255212677,
+      "group_accuracy": {
+        "landbird_land": 0.9935760171306209,
+        "landbird_water": 0.8261802575107297,
+        "waterbird_land": 0.7593984962406015,
+        "waterbird_water": 0.9774436090225563
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.7593984962406015,
+      "train_weighted_accuracy": 0.9808613734788743
+    }
+  },
+  {
+    "epoch": 24,
+    "lr": 8.175883860929588e-06,
+    "train": {
+      "loss": 0.19971509751425795,
+      "ce": 0.19971509751425795,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 18.127589446026832
+    },
+    "validation": {
+      "accuracy": 0.8982485404503753,
+      "group_accuracy": {
+        "landbird_land": 0.9935760171306209,
+        "landbird_water": 0.8175965665236051,
+        "waterbird_land": 0.7669172932330827,
+        "waterbird_water": 0.9774436090225563
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.7669172932330827,
+      "train_weighted_accuracy": 0.9806197996498749
+    }
+  },
+  {
+    "epoch": 25,
+    "lr": 6.062843162864741e-06,
+    "train": {
+      "loss": 0.20019425639457325,
+      "ce": 0.20019425639457325,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 17.95698325894773
+    },
+    "validation": {
+      "accuracy": 0.8957464553794829,
+      "group_accuracy": {
+        "landbird_land": 0.9914346895074947,
+        "landbird_water": 0.8090128755364807,
+        "waterbird_land": 0.7819548872180451,
+        "waterbird_water": 0.9774436090225563
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.7819548872180451,
+      "train_weighted_accuracy": 0.9789039168752829
+    }
+  },
+  {
+    "epoch": 26,
+    "lr": 4.282377607281252e-06,
+    "train": {
+      "loss": 0.19920063724855935,
+      "ce": 0.19920063724855935,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 17.855311724124476
+    },
+    "validation": {
+      "accuracy": 0.9074228523769808,
+      "group_accuracy": {
+        "landbird_land": 0.9935760171306209,
+        "landbird_water": 0.8433476394849786,
+        "waterbird_land": 0.7669172932330827,
+        "waterbird_water": 0.9699248120300752
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.7669172932330827,
+      "train_weighted_accuracy": 0.979950525198121
+    }
+  },
+  {
+    "epoch": 27,
+    "lr": 2.864951453473475e-06,
+    "train": {
+      "loss": 0.1992849711425859,
+      "ce": 0.1992849711425859,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 17.81184202292934
+    },
+    "validation": {
+      "accuracy": 0.9032527105921602,
+      "group_accuracy": {
+        "landbird_land": 0.9914346895074947,
+        "landbird_water": 0.8304721030042919,
+        "waterbird_land": 0.7819548872180451,
+        "waterbird_water": 0.9699248120300752
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.7819548872180451,
+      "train_weighted_accuracy": 0.9780699501251315
+    }
+  },
+  {
+    "epoch": 28,
+    "lr": 1.834817255917829e-06,
+    "train": {
+      "loss": 0.19935353606535322,
+      "ce": 0.19935353606535322,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 17.995106721064076
+    },
+    "validation": {
+      "accuracy": 0.9007506255212677,
+      "group_accuracy": {
+        "landbird_land": 0.9914346895074947,
+        "landbird_water": 0.8261802575107297,
+        "waterbird_land": 0.7744360902255639,
+        "waterbird_water": 0.9699248120300752
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.7744360902255639,
+      "train_weighted_accuracy": 0.9778174470589388
+    }
+  },
+  {
+    "epoch": 29,
+    "lr": 1.2096008963416456e-06,
+    "train": {
+      "loss": 0.1992536496009767,
+      "ce": 0.1992536496009767,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 18.116833055159077
+    },
+    "validation": {
+      "accuracy": 0.8932443703085905,
+      "group_accuracy": {
+        "landbird_land": 0.9892933618843683,
+        "landbird_water": 0.8068669527896996,
+        "waterbird_land": 0.7819548872180451,
+        "waterbird_water": 0.9699248120300752
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.7819548872180451,
+      "train_weighted_accuracy": 0.975602022770558
+    }
+  },
+  {
+    "epoch": 30,
+    "lr": 1e-06,
+    "train": {
+      "loss": 0.19948233608719704,
+      "ce": 0.19948233608719704,
+      "kd": 0.0,
+      "swaps": 0.0,
+      "samples": 4795,
+      "optimizer_updates": 38,
+      "amp_skipped_updates": 0,
+      "seconds": 18.272821967024356
+    },
+    "validation": {
+      "accuracy": 0.8974145120934112,
+      "group_accuracy": {
+        "landbird_land": 0.9914346895074947,
+        "landbird_water": 0.8154506437768241,
+        "waterbird_land": 0.7819548872180451,
+        "waterbird_water": 0.9699248120300752
+      },
+      "group_counts": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      },
+      "worst_group_accuracy": 0.7819548872180451,
+      "train_weighted_accuracy": 0.9774935270807408
+    }
+  }
+]

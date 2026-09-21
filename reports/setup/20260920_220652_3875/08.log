@@ -1,0 +1,49 @@
+$ /home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv/bin/python scripts/setup_support.py cached --stage preflight --config /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_220652_3875/effective_config.json --log /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_220652_3875/08.log --status-file /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_220652_3875/reused-8 -- /home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv/bin/python run.py preflight --config configs/pilot.json --device cuda --full-image-check 
+[재사용] preflight; 이전 성공 로그: /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_220102_4175560/09.log; 원본 commit: b93f6499c366efec6a9b0f46abf14bf23b0449dd; fingerprint: 8996579b50b5e7d713e5b986b31e3186b17ae62809a0f81a5816bfcb17f552b0
+$ /home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv/bin/python scripts/setup_support.py cached --stage preflight --config /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_220102_4175560/effective_config.json --log /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_220102_4175560/09.log --status-file /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_220102_4175560/reused-9 -- /home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv/bin/python run.py preflight --config configs/pilot.json --device cuda --full-image-check 
+[실행] preflight
+{
+  "python": "3.11.11",
+  "torch": "2.5.1+cu121",
+  "device": "cuda:0",
+  "metadata_sha256": "2f023b9dc371f6fbb82c7cb810ff0f03e19c54c8055a2e37517ae7bb56644362",
+  "effective_batch_size": 128,
+  "segmentation_available": true,
+  "splits": {
+    "train": {
+      "count": 4795,
+      "groups": {
+        "landbird_land": 3498,
+        "landbird_water": 184,
+        "waterbird_land": 56,
+        "waterbird_water": 1057
+      }
+    },
+    "validation": {
+      "count": 1199,
+      "groups": {
+        "landbird_land": 467,
+        "landbird_water": 466,
+        "waterbird_land": 133,
+        "waterbird_water": 133
+      }
+    },
+    "test": {
+      "count": 5794,
+      "groups": {
+        "landbird_land": 2255,
+        "landbird_water": 2255,
+        "waterbird_land": 642,
+        "waterbird_water": 642
+      }
+    }
+  },
+  "gpu": {
+    "name": "NVIDIA RTX A5000",
+    "total_gib": 23.5419921875,
+    "free_gib": 18.48779296875
+  },
+  "disk_free_gib": 91.64486694335938,
+  "image_integrity_check": "all images"
+}
+
