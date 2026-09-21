@@ -1,0 +1,18 @@
+$ /home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv/bin/python scripts/setup_support.py cached --stage preflight --config /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_214256_4099535/effective_config.json --log /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_214256_4099535/08.log --status-file /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_214256_4099535/reused-8 -- /home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv/bin/python run.py preflight --config configs/pilot.json --device cuda --full-image-check 
+[실행] preflight
+Traceback (most recent call last):
+  File "/home/kebap/Desktop/workspace/34/aim-lab-test-1/run.py", line 130, in <module>
+    main()
+  File "/home/kebap/Desktop/workspace/34/aim-lab-test-1/run.py", line 92, in main
+    print(json.dumps(preflight(cfg, args.full_image_check), indent=2))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kebap/Desktop/workspace/34/aim-lab-test-1/waterbirds_kd/preflight.py", line 16, in preflight
+    "device": str(device), "metadata_sha256": metadata_hash(cfg),
+                                              ^^^^^^^^^^^^^^^^^^
+  File "/home/kebap/Desktop/workspace/34/aim-lab-test-1/waterbirds_kd/utils.py", line 84, in metadata_hash
+    return sha256(Path(cfg.data_root) / "metadata.csv")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kebap/Desktop/workspace/34/aim-lab-test-1/waterbirds_kd/utils.py", line 77, in sha256
+    with open(path, "rb") as file:
+         ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'data/waterbird_complete95_forest2water2/metadata.csv'

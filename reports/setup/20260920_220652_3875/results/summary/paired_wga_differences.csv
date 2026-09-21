@@ -1,0 +1,8 @@
+method,reference,paired_seeds,mean_wga_delta,std_wga_delta
+ce,student,1,-0.014018691588785048,
+full,student,1,-0.014018691588785048,
+random,student,1,-0.004672897196261683,
+foreground_rescue_5,student,1,0.012461059190031154,
+foreground_rescue_10,student,1,0.0,
+foreground_rescue_20,student,1,0.0031152647975077885,
+random_rescue_10,student,1,-0.014018691588785048,

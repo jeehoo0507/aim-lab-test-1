@@ -1,0 +1,22 @@
+$ /home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv/bin/python run.py smoke --device cuda --output-root /home/kebap/Desktop/workspace/34/aim-lab-test-1/outputs/setup_smoke/20260920_212556_4035547 
+Traceback (most recent call last):
+  File "/home/kebap/Desktop/workspace/34/aim-lab-test-1/run.py", line 130, in <module>
+    main()
+  File "/home/kebap/Desktop/workspace/34/aim-lab-test-1/run.py", line 82, in main
+    pipeline(cfg, "all")
+  File "/home/kebap/Desktop/workspace/34/aim-lab-test-1/run.py", line 28, in pipeline
+    preflight(cfg)
+  File "/home/kebap/Desktop/workspace/34/aim-lab-test-1/waterbirds_kd/preflight.py", line 14, in preflight
+    device = setup_device(cfg)
+             ^^^^^^^^^^^^^^^^^
+  File "/home/kebap/Desktop/workspace/34/aim-lab-test-1/waterbirds_kd/utils.py", line 29, in setup_device
+    torch.cuda.set_device(device)
+  File "/home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv/lib/python3.11/site-packages/torch/cuda/__init__.py", line 476, in set_device
+    device = _get_device_index(device)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv/lib/python3.11/site-packages/torch/cuda/_utils.py", line 38, in _get_device_index
+    return _torch_get_device_index(device, optional, allow_cpu)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv/lib/python3.11/site-packages/torch/_utils.py", line 814, in _get_device_index
+    raise ValueError(
+ValueError: Expected a torch.device with a specified index or an integer, but got:cuda

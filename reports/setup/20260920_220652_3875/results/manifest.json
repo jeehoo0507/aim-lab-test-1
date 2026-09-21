@@ -1,0 +1,1012 @@
+{
+  "source": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/outputs/pilot",
+  "export_commit": "b93f6499c366efec6a9b0f46abf14bf23b0449dd",
+  "runs": {
+    "seed_0/ce": {
+      "completed": true,
+      "analysis_available": true
+    },
+    "seed_0/foreground_rescue_10": {
+      "completed": true,
+      "analysis_available": true
+    },
+    "seed_0/foreground_rescue_20": {
+      "completed": true,
+      "analysis_available": true
+    },
+    "seed_0/foreground_rescue_5": {
+      "completed": true,
+      "analysis_available": true
+    },
+    "seed_0/full": {
+      "completed": true,
+      "analysis_available": true
+    },
+    "seed_0/random": {
+      "completed": true,
+      "analysis_available": true
+    },
+    "seed_0/random_rescue_10": {
+      "completed": true,
+      "analysis_available": true
+    },
+    "seed_0/student": {
+      "completed": true,
+      "analysis_available": true
+    },
+    "seed_0/teacher": {
+      "completed": true,
+      "analysis_available": false
+    }
+  },
+  "missing_or_incomplete_runs": [],
+  "include_probes": false,
+  "files": [
+    {
+      "path": "preflight.json",
+      "bytes": 1063,
+      "sha256": "deac6c4db083e74c3552c7cfbbc7819d7296e698e42ea8f5690eb9eb525d4d6e"
+    },
+    {
+      "path": "seed_0/ce/analysis/01_attention_convergence.png",
+      "bytes": 124904,
+      "sha256": "9b1233ee8413dcf5aee32e67583be18c5e9aa17c9a4b447d20166b7dc4bed6d0"
+    },
+    {
+      "path": "seed_0/ce/analysis/01b_consecutive_attention.png",
+      "bytes": 155060,
+      "sha256": "f4f6451f8bff26b759a52e7401c328e6f8c9ad5671bead108a18b3c2e20d17a1"
+    },
+    {
+      "path": "seed_0/ce/analysis/01c_topk_overlap.png",
+      "bytes": 132721,
+      "sha256": "346d3531e72b02df0643501d55b986167f07787ba956b6bca19aa3b58fd42db6"
+    },
+    {
+      "path": "seed_0/ce/analysis/02_background_selection.png",
+      "bytes": 178655,
+      "sha256": "d9ddb1ff7ad3299dd26d4ad0b7625ada661d172019920c08aaf34c032696c4d1"
+    },
+    {
+      "path": "seed_0/ce/analysis/03_foreground_missing.png",
+      "bytes": 155998,
+      "sha256": "2f0ffa7b0758ec406e2837ea449845db97fe8b2b10aac38734712dae07a1d5d1"
+    },
+    {
+      "path": "seed_0/ce/analysis/04_background_vs_kl.png",
+      "bytes": 58245,
+      "sha256": "4d363a5211423d0ff12b4394948f818003268a61bfd2c216d98e68f9399394be"
+    },
+    {
+      "path": "seed_0/ce/analysis/07_examples.png",
+      "bytes": 1272718,
+      "sha256": "406af9222e32c2a8d4aec7b7ef9060220f5bfc325c01832ebfe7bee136e7ea26"
+    },
+    {
+      "path": "seed_0/ce/analysis/analysis_info.json",
+      "bytes": 1050,
+      "sha256": "1ef53c505fb35721d48b2625c7fb0a005e8ea166554d70eedb120a73a18ab8d1"
+    },
+    {
+      "path": "seed_0/ce/analysis/attention_by_group.csv",
+      "bytes": 48392,
+      "sha256": "d1d182a96f51e59eb1c7d9c6eb1f67b33aeb4333ae4a106f8ee8aec1f5c70526"
+    },
+    {
+      "path": "seed_0/ce/analysis/attention_overall.csv",
+      "bytes": 12203,
+      "sha256": "8928c5646628081dcef852f9b1fb0abe51460a0e57b7eb215c0b007585e3a38d"
+    },
+    {
+      "path": "seed_0/ce/analysis/attention_per_image.csv",
+      "bytes": 2441400,
+      "sha256": "d304cc5196d7d53debc4ee319ff3cddac8972c459cc760fe769d57fb0c320587"
+    },
+    {
+      "path": "seed_0/ce/analysis/correction_opportunity_counts.csv",
+      "bytes": 6770,
+      "sha256": "dd2d9419621156c55e176fbc672a38460c34d6d072f95b14d6d559def58d178f"
+    },
+    {
+      "path": "seed_0/ce/analysis/correlations.csv",
+      "bytes": 75963,
+      "sha256": "c3ebdb9536ddbd7171ab19c84f66fba62d860773656de0dcbf4830c565988c90"
+    },
+    {
+      "path": "seed_0/ce/analysis/teacher_correction_opportunities.csv",
+      "bytes": 40482,
+      "sha256": "ebe6d9cad97903f217d6b544ef3b1c6909635458032f399f1989789511abd808"
+    },
+    {
+      "path": "seed_0/ce/analysis/teacher_degradation_by_group.csv",
+      "bytes": 42079,
+      "sha256": "7d67dd001e808c74e85447c29634cdaa80fe3d4f5b88604870b01b45fa33f1fc"
+    },
+    {
+      "path": "seed_0/ce/analysis/teacher_degradation_overall.csv",
+      "bytes": 11034,
+      "sha256": "e026b4047ece31379854e98480f6728c60dd75cf508fa612ceca930a36e20bc4"
+    },
+    {
+      "path": "seed_0/ce/analysis/teacher_degradation_per_image.csv",
+      "bytes": 2117167,
+      "sha256": "1502df2d3756e46c16812cf20cdda6e573a0948989219e1f2d2d7eb9e5b1360b"
+    },
+    {
+      "path": "seed_0/ce/analysis/teacher_rescue.png",
+      "bytes": 58681,
+      "sha256": "04ba29f3b46fda536722e11b84cd39e4bb9797e11d57238aeabcd66d4170ef5b"
+    },
+    {
+      "path": "seed_0/ce/analysis/teacher_rescue_final.csv",
+      "bytes": 675,
+      "sha256": "5ee049b49bf4a3b60f6119ce7feb35521e23fd4596b8ebf6c9fa3cb6338bd9c8"
+    },
+    {
+      "path": "seed_0/ce/config.json",
+      "bytes": 838,
+      "sha256": "76f85f7cdc3844bde1fd8a7f43ffa06751180cb835692b47a1f6fcad77683322"
+    },
+    {
+      "path": "seed_0/ce/history.json",
+      "bytes": 84770,
+      "sha256": "67bffc22a531b286a6793f533957338b4bc141905ad0e46ad21323818007f877"
+    },
+    {
+      "path": "seed_0/ce/probe/manifest.json",
+      "bytes": 2084,
+      "sha256": "90f8dcf45411a1bceb6aee3e64c37eb91eba526e3d53a8071c06e4a5d46f4c61"
+    },
+    {
+      "path": "seed_0/ce/result.json",
+      "bytes": 1604,
+      "sha256": "0b9c264ba02e740231291292b695748258ffce051c58f0066edbcdfe6b107fed"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/analysis/01_attention_convergence.png",
+      "bytes": 117201,
+      "sha256": "cf925128c38053b0c528c8cfeb94a9bc8e567fab78e9ff5296077e4ba28f17fb"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/analysis/01b_consecutive_attention.png",
+      "bytes": 149264,
+      "sha256": "77075159c5b2eed8e0ea5f477fc6abb26f1f6c79742fb423b90846140b7e142f"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/analysis/01c_topk_overlap.png",
+      "bytes": 123175,
+      "sha256": "64598de68e773310b95a38d62431b8b3456b3bdd834377fac259c45e61ff7817"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/analysis/02_background_selection.png",
+      "bytes": 168219,
+      "sha256": "f884ef1737e5e37908dd01488c6883e3c42cba0d329055451eace43c6463f26a"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/analysis/03_foreground_missing.png",
+      "bytes": 160963,
+      "sha256": "8ad9d2cad69736baa60dd828bb5fadc1432ca0e68239137fc9013b018782fb16"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/analysis/04_background_vs_kl.png",
+      "bytes": 57122,
+      "sha256": "c482d9cecc7249b020af736125bf8400736c58d3705b83074d15d457ba8cd8af"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/analysis/07_examples.png",
+      "bytes": 1275809,
+      "sha256": "98f84018f91f020ff5df693365225473eab8b4096483ae8de1662224f0af0e0b"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/analysis/analysis_info.json",
+      "bytes": 1068,
+      "sha256": "66fb93260aca18eef032fb81c1b5e4bac1b89981b955e867d2f5b1ac2136e9f8"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/analysis/attention_by_group.csv",
+      "bytes": 48386,
+      "sha256": "eb488303e243d23833f12878e520f6d35ae1a1d35f2ff866052066f7ce964f9b"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/analysis/attention_overall.csv",
+      "bytes": 12224,
+      "sha256": "bb79500fb793f6496ac6b282ae0bc885b7f65e98e31edbdaf0adbba54e25bb52"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/analysis/attention_per_image.csv",
+      "bytes": 2443062,
+      "sha256": "7300f6275499d13279d6c8995e2db5c179eba650a30bfddc0e481d5a2aaab3be"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/analysis/correction_opportunity_counts.csv",
+      "bytes": 6770,
+      "sha256": "2372764e532e9e20507395074df5109c858c721e5f5063bebf6cb45fd13cb978"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/analysis/correlations.csv",
+      "bytes": 75877,
+      "sha256": "568cb8ada5cd648136d010666ba2cea73f01a3c37c5bda9c0553e6414045257a"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/analysis/teacher_correction_opportunities.csv",
+      "bytes": 40386,
+      "sha256": "19400f676cf6e8354aa3becb52edc1da0dddafa9cbe40f11f8a30068477e5592"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/analysis/teacher_degradation_by_group.csv",
+      "bytes": 42077,
+      "sha256": "a9e6992758130de0510ccc04c39ebf9229717028d1a45ce396c76481556cab10"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/analysis/teacher_degradation_overall.csv",
+      "bytes": 11055,
+      "sha256": "885611a18beee0a2128890484761f72afde8f1b2384a035105fb9a7c83e1fd8a"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/analysis/teacher_degradation_per_image.csv",
+      "bytes": 2118942,
+      "sha256": "92e18ed3e4f3f4d14cb2480ce694478788a9758b5f523b1ef9ff04219bf733ac"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/analysis/teacher_rescue.png",
+      "bytes": 58389,
+      "sha256": "26c7f191fc8d800a7e67efcb155ad84382e97afc1e9d8278314410747bfe0eb5"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/analysis/teacher_rescue_final.csv",
+      "bytes": 673,
+      "sha256": "eec155f730f9e3ed9dd9b8d447662c5b21e164dbb5cb80277d9252d9d404510b"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/config.json",
+      "bytes": 838,
+      "sha256": "76f85f7cdc3844bde1fd8a7f43ffa06751180cb835692b47a1f6fcad77683322"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/history.json",
+      "bytes": 87759,
+      "sha256": "2e2d9d3edadc0e4669512a46e0f23cc219dc2c84386c4d5a5e0a8117bcf89cd4"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/probe/manifest.json",
+      "bytes": 2084,
+      "sha256": "90f8dcf45411a1bceb6aee3e64c37eb91eba526e3d53a8071c06e4a5d46f4c61"
+    },
+    {
+      "path": "seed_0/foreground_rescue_10/result.json",
+      "bytes": 1626,
+      "sha256": "e7909fb1fc5a71892db5c16fdd425cd8ac8a3e7f8e4e6294b0e1d25393d6df07"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/analysis/01_attention_convergence.png",
+      "bytes": 105711,
+      "sha256": "5e6522abd111367401a2f888db40cf3bc0f1308cd5ef9ca14dcc9e4bfab1f06a"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/analysis/01b_consecutive_attention.png",
+      "bytes": 146028,
+      "sha256": "21b10ffd315f3df5c6a384d4c6dc17ddee3e9b8d4fe7c6123e558ea2f458ddc4"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/analysis/01c_topk_overlap.png",
+      "bytes": 111631,
+      "sha256": "8e7e9068ce35fcfdd03d712f60d4344626f89f96fe2fef1ed3f699e683f98a0f"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/analysis/02_background_selection.png",
+      "bytes": 166888,
+      "sha256": "d01fa8738b18c201410fd6b18a9ecc6cde67c934325a3c5f49eca20d13e1d6aa"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/analysis/03_foreground_missing.png",
+      "bytes": 161886,
+      "sha256": "d5a0d98d7b0adc8eb0a3bed2478848102294f687bb38c4db72a23f419bcef4d7"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/analysis/04_background_vs_kl.png",
+      "bytes": 54738,
+      "sha256": "65745d5efbbbf0689bb172e03383be8af59883ac6270c352e5e23161df6078d0"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/analysis/07_examples.png",
+      "bytes": 1279569,
+      "sha256": "d6c016fa00b781f7738850dd67576df9ab56d080c96b4b404a45e163cb255e9b"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/analysis/analysis_info.json",
+      "bytes": 1068,
+      "sha256": "bfee62dc9531751ea9b9058f9ff14463e622cd1a913b4e9154588846cba2622e"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/analysis/attention_by_group.csv",
+      "bytes": 48395,
+      "sha256": "c3ab9e294abd7e6b1372bb4e1426974496294bcc48651793664836f9ab12e97c"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/analysis/attention_overall.csv",
+      "bytes": 12216,
+      "sha256": "8859896e8af1afa6a16694676170f04b6ca864294cc6ddc16456bbd780ee608d"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/analysis/attention_per_image.csv",
+      "bytes": 2441368,
+      "sha256": "d48e491bee4f52d67ca40d09e425a25298c733cdc9a5ffb7d2f3e9ad534cc633"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/analysis/correction_opportunity_counts.csv",
+      "bytes": 6770,
+      "sha256": "3aac96cb2b431e628287b0e41200bd9b3860b899885860d330cc1276a9943eb5"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/analysis/correlations.csv",
+      "bytes": 75949,
+      "sha256": "445c212041673d4b5331469c3dd6b781b656c7a4e164a3f31b84d3abd0599cb4"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/analysis/teacher_correction_opportunities.csv",
+      "bytes": 43273,
+      "sha256": "d6c250c0e457ce346e597a8d184a3f787f4240dc17ba6ae82a042eb8b2d8fa74"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/analysis/teacher_degradation_by_group.csv",
+      "bytes": 42229,
+      "sha256": "64b0eb74b24c8408b93f8b05288df767862d96e36bfaf0c035fe83c55331fea4"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/analysis/teacher_degradation_overall.csv",
+      "bytes": 11057,
+      "sha256": "5078df0bc97ddff821a0d572b4cd69741682a4e08241fb229fd19454199dbb3d"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/analysis/teacher_degradation_per_image.csv",
+      "bytes": 2117570,
+      "sha256": "ba86cda2515e0377dfd0eca8a735577ec8b304c94dcc63b0e331f6dc903f46d3"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/analysis/teacher_rescue.png",
+      "bytes": 58383,
+      "sha256": "ff96cd0885c3eee3e366f5a1ba6110c597645aabab265988b00780b1584ab85f"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/analysis/teacher_rescue_final.csv",
+      "bytes": 675,
+      "sha256": "98d2e82e151f3e48cd5d731be6142ef2a8ceac783a45a308eba1b5e126d89d67"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/config.json",
+      "bytes": 838,
+      "sha256": "76f85f7cdc3844bde1fd8a7f43ffa06751180cb835692b47a1f6fcad77683322"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/history.json",
+      "bytes": 87843,
+      "sha256": "6b80017822269756b5894cea7b212a48511c5523a754d558ad4a374e034b5548"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/probe/manifest.json",
+      "bytes": 2084,
+      "sha256": "90f8dcf45411a1bceb6aee3e64c37eb91eba526e3d53a8071c06e4a5d46f4c61"
+    },
+    {
+      "path": "seed_0/foreground_rescue_20/result.json",
+      "bytes": 1621,
+      "sha256": "468b8e2721354baf4e3888b56b6e6b7fceb1a1a5eb6658129ffc4e35b17b837a"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/analysis/01_attention_convergence.png",
+      "bytes": 125640,
+      "sha256": "f8cf616f81ea160665cbd60beff36182a8d218af1fb92d20b59e295126c2f93b"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/analysis/01b_consecutive_attention.png",
+      "bytes": 150520,
+      "sha256": "6f9222453d000cc32d04ca6932f4dd7a17afefeeb311bd6edd99cd5e79a69c55"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/analysis/01c_topk_overlap.png",
+      "bytes": 137909,
+      "sha256": "f8d4ea80f9e6988e331425b7636612cc97b70f211d9bb216191005106d3f428e"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/analysis/02_background_selection.png",
+      "bytes": 173865,
+      "sha256": "690ba31eb09721e0f6829062fb1ebe476b40a811061ccc33c3187fd8489f1b54"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/analysis/03_foreground_missing.png",
+      "bytes": 178786,
+      "sha256": "6f64467b0a3b0a2bc4d8cd9fba45ac68f5db7e7a2644b870b6a3e87fae43958d"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/analysis/04_background_vs_kl.png",
+      "bytes": 55756,
+      "sha256": "441f3a758d4e206a4971437a69cd003773d6cbaa4638962a4713d158d18290ff"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/analysis/07_examples.png",
+      "bytes": 1281603,
+      "sha256": "c7019f1a8fca956d01941cbef32198286e3140b54295034069f13d8b0ac1819f"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/analysis/analysis_info.json",
+      "bytes": 1067,
+      "sha256": "f2bd23bbfac92ddba7c170583db09007f13e6256502c8750578f79687237d7eb"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/analysis/attention_by_group.csv",
+      "bytes": 48464,
+      "sha256": "2aa26c8b1f2b238e597ba13f14e7ff2c659bf7552ad895ce3f294cb5f344d929"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/analysis/attention_overall.csv",
+      "bytes": 12235,
+      "sha256": "3d31b8cbc889037b293a72a50a1b40102c7afd03a63ff7ce12e808cdd59d09f5"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/analysis/attention_per_image.csv",
+      "bytes": 2441780,
+      "sha256": "080aafe9d80212fd8fdbd1250e57262b730ab840291ac4731a3f6ab6328ee314"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/analysis/correction_opportunity_counts.csv",
+      "bytes": 6762,
+      "sha256": "0eb553ea904256324df84af15bc5f4a0586f63cb0359055868e3005df33d5500"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/analysis/correlations.csv",
+      "bytes": 75879,
+      "sha256": "b5c698599f85e31789e97d3043626bc5ba15b168419df34392e510960644c41b"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/analysis/teacher_correction_opportunities.csv",
+      "bytes": 42832,
+      "sha256": "ce2049f47c9e3ffd4705a4c0645e4f58d27104554a7907cee66767953128c8f1"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/analysis/teacher_degradation_by_group.csv",
+      "bytes": 42128,
+      "sha256": "09eab7db26fcea56911c801c9f6697da358f8b70b14f4c40481e92b8ff1493d3"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/analysis/teacher_degradation_overall.csv",
+      "bytes": 11037,
+      "sha256": "c6e8cb31c9623deac924838a3a552f2b09298102ef05159bbd00825a40197a3e"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/analysis/teacher_degradation_per_image.csv",
+      "bytes": 2117056,
+      "sha256": "0a0075d816db2007e864e6f86ff3f90e1a7b5cc770b874b94123060b589c083e"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/analysis/teacher_rescue.png",
+      "bytes": 59366,
+      "sha256": "73a46c59015dcbdb607db1736d9532fe2a0df613463665370c1c057deed4c6bf"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/analysis/teacher_rescue_final.csv",
+      "bytes": 675,
+      "sha256": "d52cb6ba4c415f0f05e9fc1ed945a32942c6550f7146584967a44404747874d8"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/config.json",
+      "bytes": 838,
+      "sha256": "76f85f7cdc3844bde1fd8a7f43ffa06751180cb835692b47a1f6fcad77683322"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/history.json",
+      "bytes": 87782,
+      "sha256": "81c47e689827a7053e78bde0aa874948e9acd5cb12581cc71f061b1d1390b9b2"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/probe/manifest.json",
+      "bytes": 2084,
+      "sha256": "90f8dcf45411a1bceb6aee3e64c37eb91eba526e3d53a8071c06e4a5d46f4c61"
+    },
+    {
+      "path": "seed_0/foreground_rescue_5/result.json",
+      "bytes": 1622,
+      "sha256": "0211b8aa2dd46187b13fad1ad69dc29e1342aef725677fbd3e50a6a6b91e85f7"
+    },
+    {
+      "path": "seed_0/full/analysis/01_attention_convergence.png",
+      "bytes": 110383,
+      "sha256": "a423f4736d62c332e3d3acf3360255aa035cc595fe2193fe35ae33be52d94c64"
+    },
+    {
+      "path": "seed_0/full/analysis/01b_consecutive_attention.png",
+      "bytes": 142861,
+      "sha256": "75a392867cd677659a788886714848f73d0aee22e8eecaee5136cd68a80e1895"
+    },
+    {
+      "path": "seed_0/full/analysis/01c_topk_overlap.png",
+      "bytes": 117012,
+      "sha256": "0ac031d8442cb01628d149f7405ba25ff81853a2042559fb4b608fe0e3e26924"
+    },
+    {
+      "path": "seed_0/full/analysis/02_background_selection.png",
+      "bytes": 180670,
+      "sha256": "9c0bfe859491dbab19bf559a647b5672d76e892b7f8cee08367c1eca065f1f45"
+    },
+    {
+      "path": "seed_0/full/analysis/03_foreground_missing.png",
+      "bytes": 162161,
+      "sha256": "0e7b6c96f85ef99e3b505dd3e4fbf167aa28a72decb0216467501e693488c8bc"
+    },
+    {
+      "path": "seed_0/full/analysis/04_background_vs_kl.png",
+      "bytes": 56253,
+      "sha256": "c8205e8edb1782e6099f04b27d919db12466339698d137311b375eea45c1e669"
+    },
+    {
+      "path": "seed_0/full/analysis/07_examples.png",
+      "bytes": 1292507,
+      "sha256": "bfb2367ac2ab5c5c58fd3c02971113ad3235e6199e037d37f9c0218bf7b8fdc5"
+    },
+    {
+      "path": "seed_0/full/analysis/analysis_info.json",
+      "bytes": 1052,
+      "sha256": "4f863116851eb73430fa9c43f25ba72c06395455c5ee71a76290fc787b62268b"
+    },
+    {
+      "path": "seed_0/full/analysis/attention_by_group.csv",
+      "bytes": 48506,
+      "sha256": "d21f3b09479ee78baf389f0301696731515e552a055f465d202cde2ffe4856ef"
+    },
+    {
+      "path": "seed_0/full/analysis/attention_overall.csv",
+      "bytes": 12216,
+      "sha256": "b97aa506e55236bb9b3cbaff5f0f72d8a561c32a9335747b50d86771cafaab94"
+    },
+    {
+      "path": "seed_0/full/analysis/attention_per_image.csv",
+      "bytes": 2443701,
+      "sha256": "c25511ea1ac4f95cdaa117112ff8f567417d0bff7501f9d44458f5d444e74e40"
+    },
+    {
+      "path": "seed_0/full/analysis/correction_opportunity_counts.csv",
+      "bytes": 6762,
+      "sha256": "d386a822114b55ff32fc16d1e41372de71c88d8bae6ae2da7b60fde0577b284c"
+    },
+    {
+      "path": "seed_0/full/analysis/correlations.csv",
+      "bytes": 75878,
+      "sha256": "fc19bcd75a982e7aaa4a8b08d852eacfd8c4c78040a0414a53f6b87f18287c3e"
+    },
+    {
+      "path": "seed_0/full/analysis/teacher_correction_opportunities.csv",
+      "bytes": 40486,
+      "sha256": "d2405c573dab2878b046db579dd172e6fbfc628a1876cdae741ce411ec49b621"
+    },
+    {
+      "path": "seed_0/full/analysis/teacher_degradation_by_group.csv",
+      "bytes": 42241,
+      "sha256": "7df50780a99e35c98aa238bdbbb4b86a279d3c2fb9b9096873b54b48421bf4ba"
+    },
+    {
+      "path": "seed_0/full/analysis/teacher_degradation_overall.csv",
+      "bytes": 11019,
+      "sha256": "2a7ce3b92f783e7e7bf933ef5f44a47dfd195e57949822f06c7a1eee878095e1"
+    },
+    {
+      "path": "seed_0/full/analysis/teacher_degradation_per_image.csv",
+      "bytes": 2118588,
+      "sha256": "d7442008642ef6522e77ee39885c6e50c003cc1131b33614672097eb5f7266a2"
+    },
+    {
+      "path": "seed_0/full/analysis/teacher_rescue.png",
+      "bytes": 61138,
+      "sha256": "761d591c0be5470ef0f779ddf838faeba7a48ae674240262072f1317ed697ee6"
+    },
+    {
+      "path": "seed_0/full/analysis/teacher_rescue_final.csv",
+      "bytes": 666,
+      "sha256": "46c486bb11f934e7295d888913e5b3f87872f10a5a35bdb499ab8ff3f441b9ce"
+    },
+    {
+      "path": "seed_0/full/config.json",
+      "bytes": 838,
+      "sha256": "76f85f7cdc3844bde1fd8a7f43ffa06751180cb835692b47a1f6fcad77683322"
+    },
+    {
+      "path": "seed_0/full/history.json",
+      "bytes": 86381,
+      "sha256": "543af3267c647c85f2aefab49803c159495ba5d5f4926471f19e522604a9447c"
+    },
+    {
+      "path": "seed_0/full/probe/manifest.json",
+      "bytes": 2084,
+      "sha256": "90f8dcf45411a1bceb6aee3e64c37eb91eba526e3d53a8071c06e4a5d46f4c61"
+    },
+    {
+      "path": "seed_0/full/result.json",
+      "bytes": 1609,
+      "sha256": "19381465c595237e91fd54318cdbd9841f6e106c04b27b2d7608e4ab7895ea8b"
+    },
+    {
+      "path": "seed_0/random/analysis/01_attention_convergence.png",
+      "bytes": 110895,
+      "sha256": "cf7fac8bcf132e2e7ad4a5a8476e4a50c0d5318ca44d2b9ee26cec6b6a6f8013"
+    },
+    {
+      "path": "seed_0/random/analysis/01b_consecutive_attention.png",
+      "bytes": 152465,
+      "sha256": "bcc451275bb44cc2e4bbdc1fd227ae2164ad67c9d08f887242a1590097dadadf"
+    },
+    {
+      "path": "seed_0/random/analysis/01c_topk_overlap.png",
+      "bytes": 118372,
+      "sha256": "bba0cc69575f7bc8fd74c5a7ad7f242a5fa84ec08ddcc94952678a6c32add543"
+    },
+    {
+      "path": "seed_0/random/analysis/02_background_selection.png",
+      "bytes": 168114,
+      "sha256": "72de5c58b12d6bb4e56abb64fb18fee80f51b37d950e31842236bc29a5903173"
+    },
+    {
+      "path": "seed_0/random/analysis/03_foreground_missing.png",
+      "bytes": 163406,
+      "sha256": "a0e020889ef807c4e98d438dcc2893779d7822c403cd396737b11b4a9407cf65"
+    },
+    {
+      "path": "seed_0/random/analysis/04_background_vs_kl.png",
+      "bytes": 54873,
+      "sha256": "0b5b55c08e0e2405b9c001afdadb817665d505f7dde0885c047d2d6445b5b21d"
+    },
+    {
+      "path": "seed_0/random/analysis/07_examples.png",
+      "bytes": 1294127,
+      "sha256": "4b5f400dd1a0566f8015c958df56614b531d323527097a999302aefb02d2dcd3"
+    },
+    {
+      "path": "seed_0/random/analysis/analysis_info.json",
+      "bytes": 1054,
+      "sha256": "1fc8fffd6ab62352bee8d1c398bb202ef3a897dd86156c5004b4b540488b97c7"
+    },
+    {
+      "path": "seed_0/random/analysis/attention_by_group.csv",
+      "bytes": 48281,
+      "sha256": "36b91f79d45447573958151f3a4f000a33edc76ff0148ec55d722d0c561b98cf"
+    },
+    {
+      "path": "seed_0/random/analysis/attention_overall.csv",
+      "bytes": 12241,
+      "sha256": "bd2699a1dd2bfd4cc1881871977fc1cdc96470a78a15d3354555182c5a0b1111"
+    },
+    {
+      "path": "seed_0/random/analysis/attention_per_image.csv",
+      "bytes": 2442038,
+      "sha256": "8ec5dfa6ee7016a6d96f23d0613c8bcf7b1e23efb07e60bce1dccba20b9a0687"
+    },
+    {
+      "path": "seed_0/random/analysis/correction_opportunity_counts.csv",
+      "bytes": 6770,
+      "sha256": "91c1f7386143664b44aba7cfb2f3b14e015f8217484c3dd1c3b71ba85bc7418f"
+    },
+    {
+      "path": "seed_0/random/analysis/correlations.csv",
+      "bytes": 75881,
+      "sha256": "a881bf77fe39a352ffc0ffc1848087417ec97d139c96484a64b320fd0a4fe4c5"
+    },
+    {
+      "path": "seed_0/random/analysis/teacher_correction_opportunities.csv",
+      "bytes": 43217,
+      "sha256": "8a082abf2909505ca8141ebdd25a9a66cbf6aae5c4a7b9ab162ce5b0d7b07fd4"
+    },
+    {
+      "path": "seed_0/random/analysis/teacher_degradation_by_group.csv",
+      "bytes": 42284,
+      "sha256": "7d9e4901b99e49265d8195f38924a72d9c07031da253b4a72e5daf84145dfde5"
+    },
+    {
+      "path": "seed_0/random/analysis/teacher_degradation_overall.csv",
+      "bytes": 11037,
+      "sha256": "ecae40fc79f1423d1ebff517d0c0ed8a751a72e9351c92413423daf941e4e8bd"
+    },
+    {
+      "path": "seed_0/random/analysis/teacher_degradation_per_image.csv",
+      "bytes": 2117460,
+      "sha256": "9a9ab21f0006614e38decb26203d241fa40ce2f29ee0aa8fa312c3ce5140ea11"
+    },
+    {
+      "path": "seed_0/random/analysis/teacher_rescue.png",
+      "bytes": 57821,
+      "sha256": "9325ee064186bf47f01e30c6753b70dc6283feb94a6b37ff78cf8e5929dccdeb"
+    },
+    {
+      "path": "seed_0/random/analysis/teacher_rescue_final.csv",
+      "bytes": 681,
+      "sha256": "8e50a5da39c24371efcba9ad179509ebd76268f7443b5302902e195dc578360f"
+    },
+    {
+      "path": "seed_0/random/config.json",
+      "bytes": 838,
+      "sha256": "76f85f7cdc3844bde1fd8a7f43ffa06751180cb835692b47a1f6fcad77683322"
+    },
+    {
+      "path": "seed_0/random/history.json",
+      "bytes": 86353,
+      "sha256": "525a63525a009c21b0eb91d79f2da3c19036bb722f4ee00a3aa5d2ec427e64c6"
+    },
+    {
+      "path": "seed_0/random/probe/manifest.json",
+      "bytes": 2084,
+      "sha256": "90f8dcf45411a1bceb6aee3e64c37eb91eba526e3d53a8071c06e4a5d46f4c61"
+    },
+    {
+      "path": "seed_0/random/result.json",
+      "bytes": 1609,
+      "sha256": "63fed13e75107860f8ec32ae3bcf56baaee4f3f8ad111f847127a9843893fa8d"
+    },
+    {
+      "path": "seed_0/random_rescue_10/analysis/01_attention_convergence.png",
+      "bytes": 115879,
+      "sha256": "5c830f72b70f95458f0cb61e683b9bf92d4defcbaaaff2f68d130aeed5a2f835"
+    },
+    {
+      "path": "seed_0/random_rescue_10/analysis/01b_consecutive_attention.png",
+      "bytes": 164569,
+      "sha256": "f867cf32fc1914065fa053353ab1325a01b2cc74b4888da7551bc33a030c8184"
+    },
+    {
+      "path": "seed_0/random_rescue_10/analysis/01c_topk_overlap.png",
+      "bytes": 123851,
+      "sha256": "0f1c5c0df124a05783a1bbe20d6efd3f50009be3dd61e63d19d704fdcf48eba0"
+    },
+    {
+      "path": "seed_0/random_rescue_10/analysis/02_background_selection.png",
+      "bytes": 155935,
+      "sha256": "feadaf9543312b9d4aa880bf58279a5f88f79723ad2b83aeb6eaf36f8e7ab3a9"
+    },
+    {
+      "path": "seed_0/random_rescue_10/analysis/03_foreground_missing.png",
+      "bytes": 157084,
+      "sha256": "7ff919885da2019762bbb3ef3f3f6ce22bdccc1a458a59d29f84d1fe978a28ac"
+    },
+    {
+      "path": "seed_0/random_rescue_10/analysis/04_background_vs_kl.png",
+      "bytes": 57165,
+      "sha256": "744318285d732274ea0cca2ef588bd8d1351a5e1fff408721b6c00ecb8c2a9b6"
+    },
+    {
+      "path": "seed_0/random_rescue_10/analysis/07_examples.png",
+      "bytes": 1284717,
+      "sha256": "978dc8c5a0fc44987aa210d530ae1efdf70236fdbcc035a38ce59b9b9e30c5af"
+    },
+    {
+      "path": "seed_0/random_rescue_10/analysis/analysis_info.json",
+      "bytes": 1064,
+      "sha256": "5681ea14a89b5ee7d15da4bac9343efb9257909e9d50e88f39a4a255e60fbcd4"
+    },
+    {
+      "path": "seed_0/random_rescue_10/analysis/attention_by_group.csv",
+      "bytes": 48453,
+      "sha256": "283047e337576407d9d0ff35b1d13556ab5fb9ba71f7ebb9c15f7e74b3b6303a"
+    },
+    {
+      "path": "seed_0/random_rescue_10/analysis/attention_overall.csv",
+      "bytes": 12228,
+      "sha256": "c76592399c1252b81e55d3dcaf41d11079f3b23a2d0709b51a9928af2e43971c"
+    },
+    {
+      "path": "seed_0/random_rescue_10/analysis/attention_per_image.csv",
+      "bytes": 2441310,
+      "sha256": "b5e9ec79c8a6a2cb721042afbdabab1a5cf06d0def3c6bd9130ed4f239f9cf87"
+    },
+    {
+      "path": "seed_0/random_rescue_10/analysis/correction_opportunity_counts.csv",
+      "bytes": 6770,
+      "sha256": "6e134634e294c272b20600413c6ff7268642162f40e57d5f99e3dfe0a6186ba0"
+    },
+    {
+      "path": "seed_0/random_rescue_10/analysis/correlations.csv",
+      "bytes": 75800,
+      "sha256": "56bf7c3026241e8b5a17c502971bef6da6f3044a4ad5b73d4084fcdb4feb4a3c"
+    },
+    {
+      "path": "seed_0/random_rescue_10/analysis/teacher_correction_opportunities.csv",
+      "bytes": 42328,
+      "sha256": "48cede1c9af63c102b7e391379ade02e0b813b6dd7614520959a909ecad00b98"
+    },
+    {
+      "path": "seed_0/random_rescue_10/analysis/teacher_degradation_by_group.csv",
+      "bytes": 42122,
+      "sha256": "1e82cf65cef3fe2137ee325e45bb1075a5c18a744f31711de31d676da1a2b00e"
+    },
+    {
+      "path": "seed_0/random_rescue_10/analysis/teacher_degradation_overall.csv",
+      "bytes": 11020,
+      "sha256": "dfd6db69c1e92dfc6eeefc468185bfcdfbe894da799cb21f99fd489db8967cb9"
+    },
+    {
+      "path": "seed_0/random_rescue_10/analysis/teacher_degradation_per_image.csv",
+      "bytes": 2112988,
+      "sha256": "038ff8517ac9b3851361583d5863b8fdcdd09c5f5f79fecdd9268fcbc599c09b"
+    },
+    {
+      "path": "seed_0/random_rescue_10/analysis/teacher_rescue.png",
+      "bytes": 58630,
+      "sha256": "5b3d5f68c79a689cc1410949a5d5689a39873b445df5698ee29f73a0b409f774"
+    },
+    {
+      "path": "seed_0/random_rescue_10/analysis/teacher_rescue_final.csv",
+      "bytes": 676,
+      "sha256": "8002fa3b4a5246aa5bec437afb83b0bc3f0063a679f8471a6f5c53f38f8f603a"
+    },
+    {
+      "path": "seed_0/random_rescue_10/config.json",
+      "bytes": 838,
+      "sha256": "76f85f7cdc3844bde1fd8a7f43ffa06751180cb835692b47a1f6fcad77683322"
+    },
+    {
+      "path": "seed_0/random_rescue_10/history.json",
+      "bytes": 87765,
+      "sha256": "4a0e42a6c057489c609f5c5c7952f1b8f156af043137eba8c2c26a2daf92ded4"
+    },
+    {
+      "path": "seed_0/random_rescue_10/probe/manifest.json",
+      "bytes": 2084,
+      "sha256": "90f8dcf45411a1bceb6aee3e64c37eb91eba526e3d53a8071c06e4a5d46f4c61"
+    },
+    {
+      "path": "seed_0/random_rescue_10/result.json",
+      "bytes": 1618,
+      "sha256": "fd4af2f36815440a7942c53f0814c8f26db4727d71f5e7c14c6de63644a251ba"
+    },
+    {
+      "path": "seed_0/student/analysis/01_attention_convergence.png",
+      "bytes": 115447,
+      "sha256": "3a34e3a4d5218e65a00455c2c8e57f2a3a2156104c6a54184ec32a72146c4dca"
+    },
+    {
+      "path": "seed_0/student/analysis/01b_consecutive_attention.png",
+      "bytes": 146422,
+      "sha256": "527b957a7881718a4899d1576f0fbb31f5b46fe2b2b7887cbaadc515964a24aa"
+    },
+    {
+      "path": "seed_0/student/analysis/01c_topk_overlap.png",
+      "bytes": 124751,
+      "sha256": "3a1c586fa1cf4a6187c233fafa7e96ce18d2bdfd5b1688c9640a4a147c6920e7"
+    },
+    {
+      "path": "seed_0/student/analysis/02_background_selection.png",
+      "bytes": 175341,
+      "sha256": "554b69a34c2891305cea1d18198242fd6118255e3b90102e445db75b964e7469"
+    },
+    {
+      "path": "seed_0/student/analysis/03_foreground_missing.png",
+      "bytes": 175020,
+      "sha256": "22161b95660f1387787c268f5e1e942f1b2e896e684cdae723a9f19b0448dccb"
+    },
+    {
+      "path": "seed_0/student/analysis/04_background_vs_kl.png",
+      "bytes": 54884,
+      "sha256": "ecf2abb75bff7fcaceb6dbfd4954b9afb059840522c0421572eae069c0828be7"
+    },
+    {
+      "path": "seed_0/student/analysis/07_examples.png",
+      "bytes": 1292322,
+      "sha256": "18045c83017a68e6609f19c722fe7844982326bff62ea15c3f575d0f864449ae"
+    },
+    {
+      "path": "seed_0/student/analysis/analysis_info.json",
+      "bytes": 1055,
+      "sha256": "47aad36a1e15d2edadc631d47043d55d90c7bca49d58fa01a737db97ef535fe4"
+    },
+    {
+      "path": "seed_0/student/analysis/attention_by_group.csv",
+      "bytes": 48519,
+      "sha256": "191b1f9dbf57e48f5aca618b778be22bdd8479f0e803dc4e3442147fbc0bc4ed"
+    },
+    {
+      "path": "seed_0/student/analysis/attention_overall.csv",
+      "bytes": 12213,
+      "sha256": "8484ed66fda7d4d1e88577ad99cacea23ddff8cf0f09ef0759ca21abd64b6c87"
+    },
+    {
+      "path": "seed_0/student/analysis/attention_per_image.csv",
+      "bytes": 2442486,
+      "sha256": "52cd5ae3995e73ff38078bc832f08f70fa0eb36793e444bad8dc473e6c951438"
+    },
+    {
+      "path": "seed_0/student/analysis/correction_opportunity_counts.csv",
+      "bytes": 6762,
+      "sha256": "c68cba26e20f548a73396030e22b7d5bb5675ea4e80da440718a4d2da995e223"
+    },
+    {
+      "path": "seed_0/student/analysis/correlations.csv",
+      "bytes": 75956,
+      "sha256": "ce4a83cd6052dbef952026d1151c0a71370ace052aac1b1126eceac771c301a6"
+    },
+    {
+      "path": "seed_0/student/analysis/teacher_correction_opportunities.csv",
+      "bytes": 43049,
+      "sha256": "01535fa9d668617ef4aea2d4d912c26fa40bf571ba1bb18e25b10195e2b75781"
+    },
+    {
+      "path": "seed_0/student/analysis/teacher_degradation_by_group.csv",
+      "bytes": 42274,
+      "sha256": "ffed423c3ae60afe82b26220ed9831f7ebceb19662dcf344529545f2ac19524b"
+    },
+    {
+      "path": "seed_0/student/analysis/teacher_degradation_overall.csv",
+      "bytes": 11056,
+      "sha256": "385d4756dec8fe98855f7d8e629b103742ace581ece94b1ee9ad51b9323d3351"
+    },
+    {
+      "path": "seed_0/student/analysis/teacher_degradation_per_image.csv",
+      "bytes": 2117150,
+      "sha256": "7f0ae42ede634289ab54e19c63ea99cf448bd72fcf9fb6681e0e592758860bdd"
+    },
+    {
+      "path": "seed_0/student/analysis/teacher_rescue.png",
+      "bytes": 57796,
+      "sha256": "f509899cacb3bf90634669ce9205ffc274cc799d29f1363436f279a4e87d432e"
+    },
+    {
+      "path": "seed_0/student/analysis/teacher_rescue_final.csv",
+      "bytes": 674,
+      "sha256": "bc1c0ca5cea582a19d81a4d2251f9cf6293bfe2a9ac0b3a1ebf65a4b6b3b8bde"
+    },
+    {
+      "path": "seed_0/student/config.json",
+      "bytes": 838,
+      "sha256": "76f85f7cdc3844bde1fd8a7f43ffa06751180cb835692b47a1f6fcad77683322"
+    },
+    {
+      "path": "seed_0/student/history.json",
+      "bytes": 86393,
+      "sha256": "627f61cc55488b390f41ba2b13165cbe5862a9f334b46b2d6b4410227b11bb3b"
+    },
+    {
+      "path": "seed_0/student/probe/manifest.json",
+      "bytes": 2084,
+      "sha256": "90f8dcf45411a1bceb6aee3e64c37eb91eba526e3d53a8071c06e4a5d46f4c61"
+    },
+    {
+      "path": "seed_0/student/result.json",
+      "bytes": 1613,
+      "sha256": "77ed29baf3962a0aba30db55dc5dddc86c9210913160489ceea26c3576df9ce3"
+    },
+    {
+      "path": "seed_0/teacher/config.json",
+      "bytes": 838,
+      "sha256": "76f85f7cdc3844bde1fd8a7f43ffa06751180cb835692b47a1f6fcad77683322"
+    },
+    {
+      "path": "seed_0/teacher/history.json",
+      "bytes": 25260,
+      "sha256": "4fa3f0d2de1ff8dfa84361a26cda9b6370bdee61c82a363cd6f565017fe51cb6"
+    },
+    {
+      "path": "seed_0/teacher/result.json",
+      "bytes": 1544,
+      "sha256": "353da39c23cf95d52836dcb210e3057c2fcadc564b9f0e586b9201fc88bdc54e"
+    },
+    {
+      "path": "summary/05_group_accuracy.png",
+      "bytes": 69781,
+      "sha256": "9cab5ba547f99398f8da56c6d8864a7ddb069ff9f31512854b023d61feeeeb17"
+    },
+    {
+      "path": "summary/06_worst_group_accuracy.png",
+      "bytes": 57423,
+      "sha256": "c4c08acaa5bbc8aa0736927ed11679fb764f8bf2d2cacb367571adcbce752414"
+    },
+    {
+      "path": "summary/paired_wga_differences.csv",
+      "bytes": 365,
+      "sha256": "c425b1220b2e7f5fffe8657604793d1164c5fa674784432d85b1d5aca797849a"
+    },
+    {
+      "path": "summary/results_mean_std.csv",
+      "bytes": 1983,
+      "sha256": "7eeb4f0bec7dfc05f99e871e0a7fa001736d46c1e8376169609343484337318f"
+    },
+    {
+      "path": "summary/results_per_seed.csv",
+      "bytes": 1626,
+      "sha256": "ef9a6d9e0a8f8ea25eff2b7945fc53476d94a7983f00b6fcaa65f853f89955da"
+    }
+  ],
+  "total_bytes": 56285733
+}

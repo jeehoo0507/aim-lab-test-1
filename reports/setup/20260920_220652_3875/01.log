@@ -1,0 +1,48 @@
+$ nvidia-smi --query-gpu=name\,memory.total\,memory.free\,driver_version --format=csv 
+name, memory.total [MiB], memory.free [MiB], driver_version
+NVIDIA RTX A5000, 24564 MiB, 19231 MiB, 595.84
+$ free -h 
+               total        used        free      shared  buff/cache   available
+Mem:           125Gi        72Gi       3.4Gi       1.5Gi        52Gi        52Gi
+Swap:             0B          0B          0B
+$ df -h /home/kebap/Desktop/workspace/34/aim-lab-test-1 
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p3  795G  663G   92G  88% /home
+$ lsblk -o NAME\,SIZE\,ROTA\,TYPE\,FSTYPE\,MOUNTPOINT\,MODEL 
+NAME          SIZE ROTA TYPE FSTYPE   MOUNTPOINT                                        MODEL
+loop0       260.8M    0 loop squashfs /snap/firefox/8819                                
+loop2           4K    0 loop squashfs /snap/bare/5                                      
+loop3          74M    0 loop squashfs /snap/core22/2437                                 
+loop4          74M    0 loop squashfs /snap/core22/2955                                 
+loop5        16.4M    0 loop squashfs /snap/firmware-updater/224                        
+loop6       531.4M    0 loop squashfs /snap/gnome-42-2204/247                           
+loop7        66.8M    0 loop squashfs /snap/core24/1643                                 
+loop8       614.5M    0 loop squashfs /snap/gnome-46-2404/164                           
+loop9       260.8M    0 loop squashfs /snap/firefox/8863                                
+loop10      214.9M    0 loop squashfs /snap/brave/684                                   
+loop11       16.5M    0 loop squashfs /snap/firmware-updater/226                        
+loop12       50.3M    0 loop squashfs /snap/snapd/27738                                 
+loop13      606.1M    0 loop squashfs /snap/gnome-46-2404/153                           
+loop14      531.5M    0 loop squashfs /snap/gnome-42-2204/263                           
+loop15       91.7M    0 loop squashfs /snap/gtk-common-themes/1535                      
+loop16        1.2G    0 loop squashfs /snap/libreoffice/374                             
+loop17        1.1G    0 loop squashfs /snap/libreoffice/377                             
+loop18        395M    0 loop squashfs /snap/mesa-2404/1165                              
+loop19        402M    0 loop squashfs /snap/mesa-2404/1839                              
+loop20      207.2M    0 loop squashfs /snap/moonlight/2904                              
+loop21      207.2M    0 loop squashfs /snap/moonlight/2924                              
+loop22       66.8M    0 loop squashfs /snap/core24/2124                                 
+loop23       11.8M    0 loop squashfs /snap/snap-store/1390                             
+loop24      221.4M    0 loop squashfs /snap/thunderbird/1255                            
+loop25       50.1M    0 loop squashfs /snap/snapd/27710                                 
+loop26        828K    0 loop squashfs /snap/snapd-desktop-integration/387               
+loop27        828K    0 loop squashfs /snap/snapd-desktop-integration/391               
+loop28       11.8M    0 loop squashfs /snap/snap-store/1419                             
+loop29      214.9M    0 loop squashfs /snap/brave/682                                   
+loop30      221.5M    0 loop squashfs /snap/thunderbird/1240                            
+sda           7.3T    1 disk                                                            MG06ACA800E
+└─sda1        7.3T    1 part xfs      /media/kebap/a3730efc-c3c5-4c3d-8099-a9a194c06907 
+nvme0n1     931.5G    0 disk                                                            Samsung SSD 980 1TB
+├─nvme0n1p1   122G    0 part ext4     /                                                 
+├─nvme0n1p2     1G    0 part vfat     /boot/efi                                         
+└─nvme0n1p3 808.4G    0 part ext4     /home                                             

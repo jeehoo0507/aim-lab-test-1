@@ -1,0 +1,4 @@
+$ /home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv/bin/python scripts/export_results.py --config configs/pilot.json --report-dir /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_220652_3875/results 
+Experiment report: /home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_220652_3875/results
+Exported artifacts: 53.68 MiB
+Measured project + configured data/results + shared caches: 61.68 GiB

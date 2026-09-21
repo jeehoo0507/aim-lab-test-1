@@ -1,0 +1,221 @@
+{
+  "paths": {
+    "project": {
+      "requested_path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1",
+      "resolved_path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1",
+      "exists": true,
+      "checked_ancestor": "/home/kebap/Desktop/workspace/34/aim-lab-test-1",
+      "free_gib": 91.64,
+      "total_gib": 794.67,
+      "mount": {
+        "filesystems": [
+          {
+            "source": "/dev/nvme0n1p3",
+            "target": "/home",
+            "fstype": "ext4",
+            "options": "rw,relatime,stripe=32"
+          }
+        ]
+      }
+    },
+    "venv": {
+      "requested_path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv",
+      "resolved_path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv",
+      "exists": true,
+      "checked_ancestor": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/.venv",
+      "free_gib": 91.64,
+      "total_gib": 794.67,
+      "mount": {
+        "filesystems": [
+          {
+            "source": "/dev/nvme0n1p3",
+            "target": "/home",
+            "fstype": "ext4",
+            "options": "rw,relatime,stripe=32"
+          }
+        ]
+      }
+    },
+    "data": {
+      "requested_path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/data/waterbird_complete95_forest2water2",
+      "resolved_path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/data/waterbird_complete95_forest2water2",
+      "exists": true,
+      "checked_ancestor": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/data/waterbird_complete95_forest2water2",
+      "free_gib": 91.64,
+      "total_gib": 794.67,
+      "mount": {
+        "filesystems": [
+          {
+            "source": "/dev/nvme0n1p3",
+            "target": "/home",
+            "fstype": "ext4",
+            "options": "rw,relatime,stripe=32"
+          }
+        ]
+      }
+    },
+    "segmentations": {
+      "requested_path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/data/CUB_200_2011/segmentations",
+      "resolved_path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/data/CUB_200_2011/segmentations",
+      "exists": true,
+      "checked_ancestor": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/data/CUB_200_2011/segmentations",
+      "free_gib": 91.64,
+      "total_gib": 794.67,
+      "mount": {
+        "filesystems": [
+          {
+            "source": "/dev/nvme0n1p3",
+            "target": "/home",
+            "fstype": "ext4",
+            "options": "rw,relatime,stripe=32"
+          }
+        ]
+      }
+    },
+    "checkpoints_and_results": {
+      "requested_path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/outputs/pilot",
+      "resolved_path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/outputs/pilot",
+      "exists": true,
+      "checked_ancestor": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/outputs/pilot",
+      "free_gib": 91.64,
+      "total_gib": 794.67,
+      "mount": {
+        "filesystems": [
+          {
+            "source": "/dev/nvme0n1p3",
+            "target": "/home",
+            "fstype": "ext4",
+            "options": "rw,relatime,stripe=32"
+          }
+        ]
+      }
+    },
+    "smoke": {
+      "requested_path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/outputs/setup_smoke/20260920_220652_3875",
+      "resolved_path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/outputs/setup_smoke/20260920_220652_3875",
+      "exists": false,
+      "checked_ancestor": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/outputs/setup_smoke",
+      "free_gib": 91.64,
+      "total_gib": 794.67,
+      "mount": {
+        "filesystems": [
+          {
+            "source": "/dev/nvme0n1p3",
+            "target": "/home",
+            "fstype": "ext4",
+            "options": "rw,relatime,stripe=32"
+          }
+        ]
+      }
+    },
+    "setup_cache": {
+      "requested_path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/outputs/setup_cache",
+      "resolved_path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/outputs/setup_cache",
+      "exists": true,
+      "checked_ancestor": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/outputs/setup_cache",
+      "free_gib": 91.64,
+      "total_gib": 794.67,
+      "mount": {
+        "filesystems": [
+          {
+            "source": "/dev/nvme0n1p3",
+            "target": "/home",
+            "fstype": "ext4",
+            "options": "rw,relatime,stripe=32"
+          }
+        ]
+      }
+    },
+    "logs": {
+      "requested_path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/logs",
+      "resolved_path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/logs",
+      "exists": true,
+      "checked_ancestor": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/logs",
+      "free_gib": 91.64,
+      "total_gib": 794.67,
+      "mount": {
+        "filesystems": [
+          {
+            "source": "/dev/nvme0n1p3",
+            "target": "/home",
+            "fstype": "ext4",
+            "options": "rw,relatime,stripe=32"
+          }
+        ]
+      }
+    },
+    "report": {
+      "requested_path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_220652_3875",
+      "resolved_path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_220652_3875",
+      "exists": true,
+      "checked_ancestor": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/reports/setup/20260920_220652_3875",
+      "free_gib": 91.64,
+      "total_gib": 794.67,
+      "mount": {
+        "filesystems": [
+          {
+            "source": "/dev/nvme0n1p3",
+            "target": "/home",
+            "fstype": "ext4",
+            "options": "rw,relatime,stripe=32"
+          }
+        ]
+      }
+    },
+    "downloads": {
+      "requested_path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/data/downloads",
+      "resolved_path": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/data/downloads",
+      "exists": true,
+      "checked_ancestor": "/home/kebap/Desktop/workspace/34/aim-lab-test-1/data/downloads",
+      "free_gib": 91.64,
+      "total_gib": 794.67,
+      "mount": {
+        "filesystems": [
+          {
+            "source": "/dev/nvme0n1p3",
+            "target": "/home",
+            "fstype": "ext4",
+            "options": "rw,relatime,stripe=32"
+          }
+        ]
+      }
+    },
+    "torch_cache": {
+      "requested_path": "/home/kebap/.cache/torch",
+      "resolved_path": "/home/kebap/.cache/torch",
+      "exists": true,
+      "checked_ancestor": "/home/kebap/.cache/torch",
+      "free_gib": 91.64,
+      "total_gib": 794.67,
+      "mount": {
+        "filesystems": [
+          {
+            "source": "/dev/nvme0n1p3",
+            "target": "/home",
+            "fstype": "ext4",
+            "options": "rw,relatime,stripe=32"
+          }
+        ]
+      }
+    },
+    "uv_cache": {
+      "requested_path": "/home/kebap/.cache/uv",
+      "resolved_path": "/home/kebap/.cache/uv",
+      "exists": true,
+      "checked_ancestor": "/home/kebap/.cache/uv",
+      "free_gib": 91.64,
+      "total_gib": 794.67,
+      "mount": {
+        "filesystems": [
+          {
+            "source": "/dev/nvme0n1p3",
+            "target": "/home",
+            "fstype": "ext4",
+            "options": "rw,relatime,stripe=32"
+          }
+        ]
+      }
+    }
+  },
+  "block_devices": "{\n   \"blockdevices\": [\n      {\n         \"name\": \"loop0\",\n         \"size\": \"260.8M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/firefox/8819\",\n         \"model\": null\n      },{\n         \"name\": \"loop2\",\n         \"size\": \"4K\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/bare/5\",\n         \"model\": null\n      },{\n         \"name\": \"loop3\",\n         \"size\": \"74M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/core22/2437\",\n         \"model\": null\n      },{\n         \"name\": \"loop4\",\n         \"size\": \"74M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/core22/2955\",\n         \"model\": null\n      },{\n         \"name\": \"loop5\",\n         \"size\": \"16.4M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/firmware-updater/224\",\n         \"model\": null\n      },{\n         \"name\": \"loop6\",\n         \"size\": \"531.4M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/gnome-42-2204/247\",\n         \"model\": null\n      },{\n         \"name\": \"loop7\",\n         \"size\": \"66.8M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/core24/1643\",\n         \"model\": null\n      },{\n         \"name\": \"loop8\",\n         \"size\": \"614.5M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/gnome-46-2404/164\",\n         \"model\": null\n      },{\n         \"name\": \"loop9\",\n         \"size\": \"260.8M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/firefox/8863\",\n         \"model\": null\n      },{\n         \"name\": \"loop10\",\n         \"size\": \"214.9M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/brave/684\",\n         \"model\": null\n      },{\n         \"name\": \"loop11\",\n         \"size\": \"16.5M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/firmware-updater/226\",\n         \"model\": null\n      },{\n         \"name\": \"loop12\",\n         \"size\": \"50.3M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/snapd/27738\",\n         \"model\": null\n      },{\n         \"name\": \"loop13\",\n         \"size\": \"606.1M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/gnome-46-2404/153\",\n         \"model\": null\n      },{\n         \"name\": \"loop14\",\n         \"size\": \"531.5M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/gnome-42-2204/263\",\n         \"model\": null\n      },{\n         \"name\": \"loop15\",\n         \"size\": \"91.7M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/gtk-common-themes/1535\",\n         \"model\": null\n      },{\n         \"name\": \"loop16\",\n         \"size\": \"1.2G\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/libreoffice/374\",\n         \"model\": null\n      },{\n         \"name\": \"loop17\",\n         \"size\": \"1.1G\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/libreoffice/377\",\n         \"model\": null\n      },{\n         \"name\": \"loop18\",\n         \"size\": \"395M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/mesa-2404/1165\",\n         \"model\": null\n      },{\n         \"name\": \"loop19\",\n         \"size\": \"402M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/mesa-2404/1839\",\n         \"model\": null\n      },{\n         \"name\": \"loop20\",\n         \"size\": \"207.2M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/moonlight/2904\",\n         \"model\": null\n      },{\n         \"name\": \"loop21\",\n         \"size\": \"207.2M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/moonlight/2924\",\n         \"model\": null\n      },{\n         \"name\": \"loop22\",\n         \"size\": \"66.8M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/core24/2124\",\n         \"model\": null\n      },{\n         \"name\": \"loop23\",\n         \"size\": \"11.8M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/snap-store/1390\",\n         \"model\": null\n      },{\n         \"name\": \"loop24\",\n         \"size\": \"221.4M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/thunderbird/1255\",\n         \"model\": null\n      },{\n         \"name\": \"loop25\",\n         \"size\": \"50.1M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/snapd/27710\",\n         \"model\": null\n      },{\n         \"name\": \"loop26\",\n         \"size\": \"828K\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/snapd-desktop-integration/387\",\n         \"model\": null\n      },{\n         \"name\": \"loop27\",\n         \"size\": \"828K\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/snapd-desktop-integration/391\",\n         \"model\": null\n      },{\n         \"name\": \"loop28\",\n         \"size\": \"11.8M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/snap-store/1419\",\n         \"model\": null\n      },{\n         \"name\": \"loop29\",\n         \"size\": \"214.9M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/brave/682\",\n         \"model\": null\n      },{\n         \"name\": \"loop30\",\n         \"size\": \"221.5M\",\n         \"rota\": false,\n         \"type\": \"loop\",\n         \"fstype\": \"squashfs\",\n         \"mountpoint\": \"/snap/thunderbird/1240\",\n         \"model\": null\n      },{\n         \"name\": \"sda\",\n         \"size\": \"7.3T\",\n         \"rota\": true,\n         \"type\": \"disk\",\n         \"fstype\": null,\n         \"mountpoint\": null,\n         \"model\": \"MG06ACA800E\",\n         \"children\": [\n            {\n               \"name\": \"sda1\",\n               \"size\": \"7.3T\",\n               \"rota\": true,\n               \"type\": \"part\",\n               \"fstype\": \"xfs\",\n               \"mountpoint\": \"/media/kebap/a3730efc-c3c5-4c3d-8099-a9a194c06907\",\n               \"model\": null\n            }\n         ]\n      },{\n         \"name\": \"nvme0n1\",\n         \"size\": \"931.5G\",\n         \"rota\": false,\n         \"type\": \"disk\",\n         \"fstype\": null,\n         \"mountpoint\": null,\n         \"model\": \"Samsung SSD 980 1TB\",\n         \"children\": [\n            {\n               \"name\": \"nvme0n1p1\",\n               \"size\": \"122G\",\n               \"rota\": false,\n               \"type\": \"part\",\n               \"fstype\": \"ext4\",\n               \"mountpoint\": \"/\",\n               \"model\": null\n            },{\n               \"name\": \"nvme0n1p2\",\n               \"size\": \"1G\",\n               \"rota\": false,\n               \"type\": \"part\",\n               \"fstype\": \"vfat\",\n               \"mountpoint\": \"/boot/efi\",\n               \"model\": null\n            },{\n               \"name\": \"nvme0n1p3\",\n               \"size\": \"808.4G\",\n               \"rota\": false,\n               \"type\": \"part\",\n               \"fstype\": \"ext4\",\n               \"mountpoint\": \"/home\",\n               \"model\": null\n            }\n         ]\n      }\n   ]\n}"
+}
