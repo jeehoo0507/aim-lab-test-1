@@ -7,6 +7,7 @@ DeiT-Small입니다. 모든 student 조건은 seed 0과 동일한 초기화/데�
 ## 바로 볼 파일
 
 - [`CONCLUSIONS.md`](CONCLUSIONS.md): 결과 해석, 통계 검정, 한계와 다음 실험
+- [`figures/baseline_three_metrics.png`](figures/baseline_three_metrics.png): CE / Full KD / Random Mask KD / MaskedKD의 계획된 세 지표 비교
 - [`figures/worst_group_accuracy.png`](figures/worst_group_accuracy.png): 조건별 test WGA
 - [`figures/group_accuracy.png`](figures/group_accuracy.png): 네 그룹별 test 정확도
 - [`figures/training_curves.png`](figures/training_curves.png): epoch별 validation WGA와 train loss

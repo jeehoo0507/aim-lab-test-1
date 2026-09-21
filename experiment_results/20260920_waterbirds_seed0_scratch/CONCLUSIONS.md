@@ -32,6 +32,31 @@ DeiT-Tiny의 표현 학습 한계로 판단됩니다. 현재 결과는 가설의
 세부 수치는 [`tables/final_metrics_with_wilson_ci.csv`](tables/final_metrics_with_wilson_ci.csv)에
 있습니다.
 
+## 초기 계획의 baseline 세 지표
+
+초기 계획에서 CE only, Full KD, Random Mask KD, student-guided MaskedKD를 다음 세 항목으로
+비교하기로 했습니다.
+
+| 방법 | Average accuracy | landbird/land | landbird/water | waterbird/land | waterbird/water | WGA |
+|---|---:|---:|---:|---:|---:|---:|
+| CE only | **59.87%** | 93.66% | **29.58%** | 19.00% | 88.47% | 19.00% |
+| Full KD | 55.07% | 89.62% | 22.84% | 19.00% | 83.02% | 19.00% |
+| Random Mask KD | 58.65% | **93.35%** | 26.12% | 19.94% | 89.72% | 19.94% |
+| MaskedKD | 57.80% | 93.30% | 23.59% | **20.40%** | **90.65%** | **20.40%** |
+
+![Baseline three metrics](figures/baseline_three_metrics.png)
+
+- **Average accuracy:** CE가 가장 높고 MaskedKD는 CE보다 2.07%p 낮았습니다.
+- **4-group accuracy:** 네 방법 모두 정렬된 그룹은 높고 충돌 그룹은 낮았습니다. MaskedKD는
+  `waterbird_land`에서 네 baseline 중 가장 높았지만 `landbird_water`에서는 CE와 Random보다
+  낮았습니다.
+- **Worst-group accuracy:** MaskedKD 20.40%, Random Mask KD 19.94%, CE/Full KD 19.00%입니다.
+  MaskedKD와 Random의 차이는 0.47%p에 불과해 seed 0 하나로 우위를 주장할 수 없습니다.
+
+따라서 baseline 비교에서는 student-guided masking이 average accuracy를 개선하지 않았고 WGA에서는
+아주 작은 증가만 보였습니다. 이후 foreground rescue 분석은 이 작은 차이가 왜 최종 성능으로 크게
+이어지지 않았는지 teacher-signal 수준에서 조사한 별도 causal intervention입니다.
+
 ## 데이터 불균형
 
 훈련 그룹 수는 다음과 같습니다.
@@ -91,4 +116,3 @@ foreground rescue가 teacher 신호를 더 유용하게 만든다는 근거는 �
 `imagenet`으로 바꾼 seed 0 pilot을 별도로 실행합니다. 그 결과 WGA가 충분히 상승하면 해당 설정에서
 5 seeds를 실행합니다. 이후에는 best checkpoint probe와 per-image test prediction을 함께 저장해야
 최종 성능과 teacher-signal 메커니즘을 직접 연결할 수 있습니다.
-
