@@ -6,5 +6,8 @@ __pycache__/
 outputs/
 logs/
 data/
+/artifacts/
+/experiment_results/**/raw_results/
+*.part-*
 *.tar.gz
 .DS_Store
